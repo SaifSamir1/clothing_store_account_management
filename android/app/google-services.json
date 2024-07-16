@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "512853407260",
+    "project_id": "account-mangment-responsive",
+    "storage_bucket": "account-mangment-responsive.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:512853407260:android:bb519c5c036eb9b64491d9",
+        "android_client_info": {
+          "package_name": "com.saifsamir.accountmanagmentresponsive"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCpnyBX9q6ZrJJzdZHxRl0v50_yu5G3t4U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
