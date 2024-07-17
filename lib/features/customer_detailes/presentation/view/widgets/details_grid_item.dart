@@ -23,7 +23,7 @@ class DetailsItem extends StatelessWidget {
       color: Colors.black12,
       elevation: 0,
       child: Padding(
-        padding: const EdgeInsets.only(left: 15.0),
+        padding: const EdgeInsets.only(left: 15.0,right: 15,),
         child: Row(
           children: [
             Text(

@@ -1,12 +1,9 @@
-import 'dart:developer';
 
-import 'package:account_mangment_responsive/core/utils/app_router.dart';
 import 'package:account_mangment_responsive/core/widgets/refresh_icon.dart';
 import 'package:account_mangment_responsive/features/customer_detailes/presentation/manger/customer_details_cubit.dart';
 import 'package:account_mangment_responsive/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:go_router/go_router.dart';
 import '../../../../../core/utils/app_style.dart';
 import '../../../../../core/utils/constant.dart';
 import '../../../data/models/all_details_for_the_customer_model.dart';
@@ -51,13 +48,12 @@ class _TheFinalAmountState extends State<TheFinalAmount> {
           child: BlocBuilder<CustomerDetailsCubit, CustomerDetailsState>(
             builder: (context, state) {
               if (state is GetCustomerInfoLoading) {
-                return Center(
-                  child: CircularProgressIndicator(color: defaultColor),
+                return const Center(
+                  child: Text("        "),
                 );
               }
               if (state is GetCustomerInfoSuccess ||
                   state is GetCustomerDetailsSuccess) {
-                log('${BlocProvider.of<CustomerDetailsCubit>(context).customerInfo.money}');
                 return Text(
                   '${BlocProvider.of<CustomerDetailsCubit>(context).customerInfo.money}',
                   style: AppStyles.styleMedium20(context)
@@ -70,8 +66,8 @@ class _TheFinalAmountState extends State<TheFinalAmount> {
         ),
         const Spacer(),
         RefreshIcon(onPressed: () {
-          GoRouter.of(context).pushReplacement(AppRouter.kCustomerDetailsView,
-              extra: widget.allDetailsForTheCustomerModel);
+          BlocProvider.of<CustomerDetailsCubit>(context).getCustomerDetailsBody(
+              customerId: widget.allDetailsForTheCustomerModel.customerId);
         }),
       ],
     );

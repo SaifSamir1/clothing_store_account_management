@@ -45,12 +45,12 @@ class CustomAppBar extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(right: 10.0, left: 10),
               child: CustomButton(
+                buttonHeight: 37,
                 iconColor: Colors.white,
                 text: S.of(context).edit,
                 onPressed: actionButtonOnPressed ?? () {},
-                minWidth: 90,
+                minWidth: 60,
                 icon: Icons.edit,
-                color: defaultColor,
               ),
             ),
         ],

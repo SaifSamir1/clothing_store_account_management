@@ -48,12 +48,13 @@ class HomeViewBodyForms extends StatelessWidget {
         }
         return SliverToBoxAdapter(
           child: SizedBox(
-              height: 400,
-              child: Center(
-                child: CircularProgressIndicator(
-                  color: defaultColor,
-                ),
-              )),
+            height: 400,
+            child: Center(
+              child: CircularProgressIndicator(
+                color: defaultColor,
+              ),
+            ),
+          ),
         );
       },
     );

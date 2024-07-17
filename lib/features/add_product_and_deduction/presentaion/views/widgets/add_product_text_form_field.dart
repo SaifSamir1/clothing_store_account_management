@@ -26,7 +26,7 @@ class AddProductTextFormField extends StatelessWidget {
               controller: nameController,
               keyBoardType: TextInputType.name,
               valedate: (value){
-                return 'Product name must not be empty';
+                return '';
               },
             ),
             const SizedBox(height: 15,),

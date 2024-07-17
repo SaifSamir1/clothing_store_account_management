@@ -20,7 +20,7 @@ class MobileLayoutAddCustomer extends StatelessWidget {
             children: [
               CustomAppBar(
                 backButtonOnPressed: () {
-                  GoRouter.of(context).pushReplacement(AppRouter.kHomeView);
+                  GoRouter.of(context).pop();
                 },
                 title: S.of(context).addCustomer,
                 icon: Icons.person,

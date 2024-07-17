@@ -13,6 +13,7 @@ class CustomButton extends StatelessWidget {
     this.color,
     this.isLoading = false,
     this.iconColor,
+    this.buttonHeight,
   });
 
   final String text;
@@ -22,15 +23,16 @@ class CustomButton extends StatelessWidget {
   final Color? color;
   final Color? iconColor;
   final bool? isLoading;
+  final double? buttonHeight;
   @override
   Widget build(BuildContext context) {
     return MaterialButton(
-      padding: const EdgeInsets.only(left: 15, right: 15),
+      padding: const EdgeInsets.only(left: 15, right:15),
       onPressed: onPressed,
-      color: color ?? defaultColor,
+      color: color ?? Colors.transparent,
       elevation: 0,
       minWidth: minWidth,
-      height: 48,
+      height: buttonHeight ?? 48,
       shape: OutlineInputBorder(
           borderRadius: BorderRadius.circular(8),
           borderSide: const BorderSide(color: Colors.white)),

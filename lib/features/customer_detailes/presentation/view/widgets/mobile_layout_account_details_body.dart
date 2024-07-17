@@ -10,29 +10,11 @@ import '../../../../../core/utils/custome_error_widget.dart';
 import '../../../data/models/all_details_for_the_customer_model.dart';
 import 'customer_details_list_view.dart';
 
-class MobilLayoutAccountDetailsBody extends StatefulWidget {
+class MobilLayoutAccountDetailsBody extends StatelessWidget {
   const MobilLayoutAccountDetailsBody(
       {super.key, required this.allDetailsForTheCustomerModel});
 
   final AllDetailsForTheCustomerModel allDetailsForTheCustomerModel;
-
-  @override
-  State<MobilLayoutAccountDetailsBody> createState() =>
-      _MobilLayoutAccountDetailsBodyState();
-}
-
-class _MobilLayoutAccountDetailsBodyState
-    extends State<MobilLayoutAccountDetailsBody> {
-  List<AddProductAndDeductionModel> productsAndDeductionDetails = [];
-  List<QueryDocumentSnapshot> allProducts = [];
-  @override
-  void initState() {
-    super.initState();
-    BlocProvider.of<CustomerDetailsCubit>(context).getCustomerDetailsBody(
-        customerId: widget.allDetailsForTheCustomerModel.customerId,
-        docs: allProducts,
-        productsAndDeductionDetails: productsAndDeductionDetails);
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -48,20 +30,17 @@ class _MobilLayoutAccountDetailsBodyState
             ),
           );
         }
-        if (state is GetCustomerDetailsSuccess) {
-          return CustomerDetailsListView(
-              productsAndDeductionDetails: productsAndDeductionDetails,
-              allProducts: allProducts,
-              allDetailsForTheCustomerModel:
-                  widget.allDetailsForTheCustomerModel);
+        if (state is GetCustomerDetailsLoading) {
+          return SizedBox(
+              height: 500,
+              child: Center(
+                child: CircularProgressIndicator(
+                  color: defaultColor,
+                ),
+              ));
         }
-        return SizedBox(
-            height: 500,
-            child: Center(
-              child: CircularProgressIndicator(
-                color: defaultColor,
-              ),
-            ));
+        return CustomerDetailsListView(
+            allDetailsForTheCustomerModel: allDetailsForTheCustomerModel);
       },
     );
   }

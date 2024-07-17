@@ -1,4 +1,5 @@
 import 'package:account_mangment_responsive/features/add_product_and_deduction/data/models/product_model.dart';
+import 'package:account_mangment_responsive/features/customer_detailes/data/models/customer_productions_details_model.dart';
 import 'package:account_mangment_responsive/features/customer_detailes/data/repositry/customer_details_repo.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:dartz/dartz.dart';
@@ -8,11 +9,11 @@ import '../../../../core/utils/hive_service.dart';
 
 class CustomerDetailsRepoImpl extends CustomerDetailsRepo {
   @override
-  Future<Either<Exception, String>> getCustomerDetailsBody(
-      {required List<QueryDocumentSnapshot<Object?>> docs,
-      required List<AddProductAndDeductionModel> productsAndDeductionDetails,
-      required String customerId}) async {
+  Future<Either<Exception, CustomerProductDetailsModel>> getCustomerDetailsBody(
+      {required String customerId}) async {
     try {
+      List<QueryDocumentSnapshot> docs = [];
+      List<AddProductAndDeductionModel> productsAndDeductionDetails = [];
       QuerySnapshot<Map<String, dynamic>> querySnapshot =
           await FirebaseFirestore.instance
               .collection('users')
@@ -29,7 +30,9 @@ class CustomerDetailsRepoImpl extends CustomerDetailsRepo {
         productsAndDeductionDetails
             .add(AddProductAndDeductionModel.fromjson(products.data()));
       }
-      return const Right('Create customer is Successfully');
+      CustomerProductDetailsModel customerProductDetailsModel =
+          CustomerProductDetailsModel(docs: docs, productsAndDeductionDetails: productsAndDeductionDetails);
+      return Right(customerProductDetailsModel);
     } catch (e) {
       return Left(Exception(e.toString()));
     }

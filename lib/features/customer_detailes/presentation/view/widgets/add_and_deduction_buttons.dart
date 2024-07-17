@@ -4,6 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../../../../core/utils/app_router.dart';
+import '../../../../../core/utils/constant.dart';
 import '../../../../auth_view/presentaion/views/widgets/custom_auth_button.dart';
 import '../../../data/models/all_details_for_the_customer_model.dart';
 import '../../../data/models/all_new_details_for_the_customer.dart';
@@ -36,6 +37,7 @@ class _AddAndDeductionButtonsState extends State<AddAndDeductionButtons> {
       mainAxisAlignment: MainAxisAlignment.end,
       children: [
         CustomButton(
+          color: defaultColor,
             text: S.of(context).AddProduct,
             onPressed: () {
               AllNewDetailsForTheCustomerModel
@@ -54,6 +56,7 @@ class _AddAndDeductionButtonsState extends State<AddAndDeductionButtons> {
           padding: const EdgeInsets.only(right: 10.0, left: 10),
           child: FittedBox(
               child: CustomButton(
+                  color: defaultColor,
                   text: S.of(context).Deduction,
                   onPressed: () {
                     AllNewDetailsForTheCustomerModel

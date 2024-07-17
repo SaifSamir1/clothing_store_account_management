@@ -559,6 +559,126 @@ class S {
       args: [],
     );
   }
+
+  /// `Product Details`
+  String get ProductDetails {
+    return Intl.message(
+      'Product Details',
+      name: 'ProductDetails',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Product name must not be empty`
+  String get ProductNameMustNotBeEmpty {
+    return Intl.message(
+      'Product name must not be empty',
+      name: 'ProductNameMustNotBeEmpty',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Product's price`
+  String get Productsprice {
+    return Intl.message(
+      'Product\'s price',
+      name: 'Productsprice',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Product's Name`
+  String get ProductsName {
+    return Intl.message(
+      'Product\'s Name',
+      name: 'ProductsName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Product Price must not be empty`
+  String get ProductPriceMustNotBeEmpty {
+    return Intl.message(
+      'Product Price must not be empty',
+      name: 'ProductPriceMustNotBeEmpty',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please try again`
+  String get Pleasetryagain {
+    return Intl.message(
+      'Please try again',
+      name: 'Pleasetryagain',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Product added successfully`
+  String get Productaddedsuccessfully {
+    return Intl.message(
+      'Product added successfully',
+      name: 'Productaddedsuccessfully',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Deduction Details`
+  String get DeductionDetails {
+    return Intl.message(
+      'Deduction Details',
+      name: 'DeductionDetails',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `by Who`
+  String get byWho {
+    return Intl.message(
+      'by Who',
+      name: 'byWho',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The amount of the deduction`
+  String get Theamountofthededuction {
+    return Intl.message(
+      'The amount of the deduction',
+      name: 'Theamountofthededuction',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `the amount of the deduction must not be empty`
+  String get deductionmustnotbeempty {
+    return Intl.message(
+      'the amount of the deduction must not be empty',
+      name: 'deductionmustnotbeempty',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The deduction was successful`
+  String get deductionsuccessfully {
+    return Intl.message(
+      'The deduction was successful',
+      name: 'deductionsuccessfully',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

@@ -12,6 +12,8 @@ import '../../features/add_product_and_deduction/presentaion/views/deduction_pro
 import '../../features/auth_view/presentaion/views/auth_screen_signin.dart';
 import '../../features/customer_detailes/data/models/all_details_for_the_customer_model.dart';
 import '../../features/customer_detailes/data/models/all_new_details_for_the_customer.dart';
+import '../../features/customer_detailes/data/repositry/customer_details_repo_impl.dart';
+import '../../features/customer_detailes/presentation/manger/customer_details_cubit.dart';
 import '../../features/customer_detailes/presentation/view/customer_detailes_view.dart';
 import 'hive_service.dart';
 
@@ -65,9 +67,14 @@ abstract class AppRouter {
       ),
       GoRoute(
         path: kCustomerDetailsView,
-        builder: (context, state) => CustomerDetailsView(
-          allDetailsForTheCustomerModel:
-              state.extra as AllDetailsForTheCustomerModel,
+        builder: (context, state) => BlocProvider(
+          create: (context) => CustomerDetailsCubit(
+            CustomerDetailsRepoImpl(),
+          ),
+          child: CustomerDetailsView(
+            allDetailsForTheCustomerModel:
+                state.extra as AllDetailsForTheCustomerModel,
+          ),
         ),
       ),
       GoRoute(

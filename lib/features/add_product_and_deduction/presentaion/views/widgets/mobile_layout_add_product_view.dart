@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../../../../core/utils/app_style.dart';
+import '../../../../../generated/l10n.dart';
 import '../../../../add_and_edit_customer/presentation/views/widgets/custom_app_bar.dart';
 import '../../../../customer_detailes/data/models/all_new_details_for_the_customer.dart';
 import 'mobile_layout_product_details.dart';
@@ -23,7 +24,7 @@ class MobileLayoutAddProductView extends StatelessWidget {
                 backButtonOnPressed: () {
                   GoRouter.of(context).pop();
                 },
-                title: 'Add Product',
+                title: S.of(context).AddProduct,
                 icon: Icons.production_quantity_limits,
               ),
               const SizedBox(
@@ -32,7 +33,7 @@ class MobileLayoutAddProductView extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.only(left: 10.0),
                 child: Text(
-                  '- Product Details',
+                  ' - ${S.of(context).ProductDetails}',
                   style: AppStyles.styleSemiBold24WithoutFontFamily(context),
                 ),
               ),
