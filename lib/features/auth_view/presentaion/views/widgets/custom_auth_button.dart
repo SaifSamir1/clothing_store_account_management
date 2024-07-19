@@ -1,4 +1,4 @@
-import 'package:account_mangment_responsive/core/utils/app_style.dart';
+import 'package:account_mangment_responsive/core/theme/app_style.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../core/utils/constant.dart';
@@ -13,6 +13,8 @@ class CustomButton extends StatelessWidget {
     this.color,
     this.isLoading = false,
     this.iconColor,
+    this.buttonHeight,
+    this.textStyle,
   });
 
   final String text;
@@ -22,15 +24,17 @@ class CustomButton extends StatelessWidget {
   final Color? color;
   final Color? iconColor;
   final bool? isLoading;
+  final TextStyle? textStyle;
+  final double? buttonHeight;
   @override
   Widget build(BuildContext context) {
     return MaterialButton(
-      padding: const EdgeInsets.only(left: 15, right: 15),
+      padding: const EdgeInsets.only(left: 15, right:15),
       onPressed: onPressed,
-      color: color ?? defaultColor,
+      color: color ?? Colors.transparent,
       elevation: 0,
       minWidth: minWidth,
-      height: 48,
+      height: buttonHeight ?? 48,
       shape: OutlineInputBorder(
           borderRadius: BorderRadius.circular(8),
           borderSide: const BorderSide(color: Colors.white)),
@@ -54,7 +58,7 @@ class CustomButton extends StatelessWidget {
                 ),
                 Text(text,
                     textAlign: TextAlign.center,
-                    style: AppStyles.styleSemiBold14(context).copyWith(
+                    style:textStyle ?? AppStyles.styleSemiBold14(context).copyWith(
                       color: iconColor ?? Colors.white,
                     )),
               ],

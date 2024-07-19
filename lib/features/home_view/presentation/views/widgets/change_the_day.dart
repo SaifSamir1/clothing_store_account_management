@@ -2,7 +2,8 @@ import 'package:account_mangment_responsive/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-import '../../../../../core/utils/app_router.dart';
+import '../../../../../core/routing/app_router.dart';
+import '../../../../../core/routing/routes.dart';
 import '../../../../../core/widgets/custom_alert_dialoge.dart';
 
 class ChangeTheDay extends StatelessWidget {
@@ -31,7 +32,8 @@ void _showCustomDialog(BuildContext context) {
         nameOfPositiveButton: S.of(context).yes,
         nameOfNegativeButton: S.of(context).cansle,
         onPositiveButtonPressed: () {
-          GoRouter.of(context).push(AppRouter.kSelectTheDay);
+          GoRouter.of(context).pop();
+          GoRouter.of(context).pushReplacement(Routes.selectTheDay);
         },
         onNegativeButtonPressed: () {
           Navigator.of(context).pop(); // Close the dialog

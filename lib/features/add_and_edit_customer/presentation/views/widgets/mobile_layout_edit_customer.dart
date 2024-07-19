@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 
-import '../../../../../core/utils/app_style.dart';
+import '../../../../../core/theme/app_style.dart';
 import '../../../../customer_detailes/data/models/all_details_for_the_customer_model.dart';
 import 'custom_app_bar.dart';
 import 'new_information_mobile_layout.dart';
@@ -42,13 +42,16 @@ class MobileLayoutEditCustomer extends StatelessWidget {
                 ),
               ),
               FittedBox(
-                  child: BlocProvider(
-                create: (context) =>
-                    EditCustomerCubit(AddEditCustomerRepoImpl()),
-                child: NewInformationMobilLayout(
-                  allDetailsForTheCustomerModel: allDetailsForTheCustomerModel,
+                child: BlocProvider(
+                  create: (context) => EditCustomerCubit(
+                    AddEditCustomerRepoImpl(),
+                  ),
+                  child: NewInformationMobilLayout(
+                    allDetailsForTheCustomerModel:
+                        allDetailsForTheCustomerModel,
+                  ),
                 ),
-              )),
+              ),
             ],
           ),
         ),

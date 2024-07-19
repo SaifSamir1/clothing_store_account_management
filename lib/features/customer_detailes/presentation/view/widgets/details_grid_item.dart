@@ -1,7 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../../core/utils/app_style.dart';
+import '../../../../../core/theme/app_style.dart';
 import '../../../../../core/utils/constant.dart';
 import '../../../../add_product_and_deduction/data/models/product_model.dart';
 import '../../../data/models/all_details_for_the_customer_model.dart';
@@ -23,7 +23,7 @@ class DetailsItem extends StatelessWidget {
       color: Colors.black12,
       elevation: 0,
       child: Padding(
-        padding: const EdgeInsets.only(left: 15.0),
+        padding: const EdgeInsets.only(left: 15.0,right: 15,),
         child: Row(
           children: [
             Text(

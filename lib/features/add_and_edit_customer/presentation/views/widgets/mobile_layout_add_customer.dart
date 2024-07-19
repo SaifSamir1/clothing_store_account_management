@@ -1,9 +1,9 @@
-import 'package:account_mangment_responsive/core/utils/app_router.dart';
+import 'package:account_mangment_responsive/core/routing/app_router.dart';
 import 'package:account_mangment_responsive/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-import '../../../../../core/utils/app_style.dart';
+import '../../../../../core/theme/app_style.dart';
 import 'custom_app_bar.dart';
 import 'customer_details_mobile_layout.dart';
 
@@ -20,7 +20,7 @@ class MobileLayoutAddCustomer extends StatelessWidget {
             children: [
               CustomAppBar(
                 backButtonOnPressed: () {
-                  GoRouter.of(context).pushReplacement(AppRouter.kHomeView);
+                  GoRouter.of(context).pop();
                 },
                 title: S.of(context).addCustomer,
                 icon: Icons.person,

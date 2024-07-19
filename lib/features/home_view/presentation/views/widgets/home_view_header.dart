@@ -1,10 +1,8 @@
-import 'package:account_mangment_responsive/core/utils/app_router.dart';
 import 'package:account_mangment_responsive/features/home_view/presentation/manger/home_cubit.dart';
 import 'package:account_mangment_responsive/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:go_router/go_router.dart';
-import '../../../../../core/utils/app_style.dart';
+import '../../../../../core/theme/app_style.dart';
 import '../../../../../core/widgets/refresh_icon.dart';
 
 class HomeViewHeader extends StatelessWidget {

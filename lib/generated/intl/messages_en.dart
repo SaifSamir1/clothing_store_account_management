@@ -36,6 +36,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "Customersuccessfullyupdated": MessageLookupByLibrary.simpleMessage(
             "Customer successfully updated"),
         "Deduction": MessageLookupByLibrary.simpleMessage("Deduction"),
+        "DeductionDetails":
+            MessageLookupByLibrary.simpleMessage("Deduction Details"),
         "EditCustomer": MessageLookupByLibrary.simpleMessage("Edit Customer"),
         "FinalAccount": MessageLookupByLibrary.simpleMessage("Final Account"),
         "FindCustomer": MessageLookupByLibrary.simpleMessage("Find a Customer"),
@@ -45,14 +47,34 @@ class MessageLookup extends MessageLookupByLibrary {
         "NewCustomersPhoneNumber": MessageLookupByLibrary.simpleMessage(
             "New Customer\'s Phone Number"),
         "NoDetailsYet": MessageLookupByLibrary.simpleMessage("No Details Yet"),
+        "Pleasetryagain":
+            MessageLookupByLibrary.simpleMessage("Please try again"),
+        "ProductDetails":
+            MessageLookupByLibrary.simpleMessage("Product Details"),
+        "ProductNameMustNotBeEmpty": MessageLookupByLibrary.simpleMessage(
+            "Product name must not be empty"),
+        "ProductPriceMustNotBeEmpty": MessageLookupByLibrary.simpleMessage(
+            "Product Price must not be empty"),
+        "Productaddedsuccessfully":
+            MessageLookupByLibrary.simpleMessage("Product added successfully"),
+        "ProductsName": MessageLookupByLibrary.simpleMessage("Product\'s Name"),
+        "Productsprice":
+            MessageLookupByLibrary.simpleMessage("Product\'s price"),
         "SignOut": MessageLookupByLibrary.simpleMessage("Sign Out"),
+        "Theamountofthededuction":
+            MessageLookupByLibrary.simpleMessage("The amount of the deduction"),
         "Thebeginmoney":
             MessageLookupByLibrary.simpleMessage("The begin money "),
         "addCustomer": MessageLookupByLibrary.simpleMessage("Add Customer"),
+        "byWho": MessageLookupByLibrary.simpleMessage("by Who"),
         "cansle": MessageLookupByLibrary.simpleMessage("Cancel"),
         "changeTheDay": MessageLookupByLibrary.simpleMessage("Change the day"),
         "customersNames":
             MessageLookupByLibrary.simpleMessage("Customers\'s Names"),
+        "deductionmustnotbeempty": MessageLookupByLibrary.simpleMessage(
+            "the amount of the deduction must not be empty"),
+        "deductionsuccessfully": MessageLookupByLibrary.simpleMessage(
+            "The deduction was successful"),
         "edit": MessageLookupByLibrary.simpleMessage("Edit"),
         "friday": MessageLookupByLibrary.simpleMessage("Friday"),
         "fullname": MessageLookupByLibrary.simpleMessage("full name "),

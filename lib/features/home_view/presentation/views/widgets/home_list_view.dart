@@ -1,10 +1,11 @@
-import 'package:account_mangment_responsive/core/utils/app_router.dart';
+import 'package:account_mangment_responsive/core/routing/app_router.dart';
 import 'package:account_mangment_responsive/features/customer_detailes/data/models/all_details_for_the_customer_model.dart';
 import 'package:account_mangment_responsive/features/home_view/presentation/manger/home_cubit.dart';
 import 'package:account_mangment_responsive/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
+import '../../../../../core/routing/routes.dart';
 import '../../../../../core/widgets/the_list_is_empty_widget.dart';
 import 'list_item.dart';
 
@@ -49,7 +50,7 @@ class HomeListView extends StatelessWidget {
                 .allCustomersDetails
                 .docs[index]
                 .id);
-    GoRouter.of(context).push(AppRouter.kCustomerDetailsView,
+    GoRouter.of(context).push(Routes.customerDetailsView,
         extra: allDetailsForTheCustomerModel);
   }
 }

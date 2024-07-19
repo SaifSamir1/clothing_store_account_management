@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import '../../../../../core/theme/app_style.dart';
+import '../../../../../generated/l10n.dart';
 import '../../../../auth_view/presentaion/views/widgets/custom_auth_button.dart';
 import '../../../../customer_detailes/data/models/all_new_details_for_the_customer.dart';
 import 'deduction_button_bloc_consumer.dart';
@@ -22,7 +24,8 @@ class DeductionButtonsMobileLayout extends StatelessWidget {
     return Row(
       children: [
         CustomButton(
-          text: 'Cancel',
+          textStyle: AppStyles.styleMedium16(context),
+          text: S.of(context).cansle,
           onPressed: () {
             GoRouter.of(context).pop();
           },

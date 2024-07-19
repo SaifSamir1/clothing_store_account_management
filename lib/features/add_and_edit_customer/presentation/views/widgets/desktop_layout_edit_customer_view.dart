@@ -6,7 +6,7 @@
 
 import 'package:flutter/material.dart';
 
-import '../../../../../core/utils/app_style.dart';
+import '../../../../../core/theme/app_style.dart';
 import 'custom_app_bar.dart';
 import 'new_information.dart';
 

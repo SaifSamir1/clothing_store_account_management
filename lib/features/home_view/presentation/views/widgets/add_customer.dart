@@ -1,7 +1,9 @@
-import 'package:account_mangment_responsive/core/utils/app_router.dart';
+import 'package:account_mangment_responsive/core/routing/app_router.dart';
 import 'package:account_mangment_responsive/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import '../../../../../core/routing/routes.dart';
+import '../../../../../core/utils/constant.dart';
 import '../../../../auth_view/presentaion/views/widgets/custom_auth_button.dart';
 
 class AddCustomer extends StatelessWidget {
@@ -17,10 +19,11 @@ class AddCustomer extends StatelessWidget {
           CustomButton(
             text: S.of(context).addCustomer,
             onPressed: () {
-              GoRouter.of(context).push(AppRouter.kAddCustomer);
+              GoRouter.of(context).push(Routes.addCustomer);
             },
             minWidth: 130,
             icon: Icons.add,
+            color: defaultColor,
           ),
           const Divider(),
         ],

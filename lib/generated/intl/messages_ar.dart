@@ -25,10 +25,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "Add": MessageLookupByLibrary.simpleMessage("إضافة"),
         "AddProduct": MessageLookupByLibrary.simpleMessage("إضافة منتج"),
         "AddcustomerSuccess":
-            MessageLookupByLibrary.simpleMessage("تم إضافة العميل بنجاح"),
+            MessageLookupByLibrary.simpleMessage("تمت إضافة العميل بنجاح"),
         "ChangeCustomerInfo": MessageLookupByLibrary.simpleMessage(
             "هل أنت متأكد أنك تريد تغيير معلومات العميل؟"),
-        "Continue": MessageLookupByLibrary.simpleMessage("متابعة"),
+        "Continue": MessageLookupByLibrary.simpleMessage("استمرار"),
         "CustomerDetails":
             MessageLookupByLibrary.simpleMessage("تفاصيل العميل"),
         "CustomersPhoneNumber":
@@ -36,7 +36,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "Customersuccessfullyupdated":
             MessageLookupByLibrary.simpleMessage("تم تحديث العميل بنجاح"),
         "Deduction": MessageLookupByLibrary.simpleMessage("خصم"),
-        "EditCustomer": MessageLookupByLibrary.simpleMessage("تعديل العميل"),
+        "DeductionDetails":
+            MessageLookupByLibrary.simpleMessage("تفاصيل الخصم"),
+        "EditCustomer": MessageLookupByLibrary.simpleMessage("تحرير العميل"),
         "FinalAccount": MessageLookupByLibrary.simpleMessage("الحساب النهائي"),
         "FindCustomer": MessageLookupByLibrary.simpleMessage("البحث عن عميل"),
         "NewAccount": MessageLookupByLibrary.simpleMessage("حساب جديد"),
@@ -45,20 +47,38 @@ class MessageLookup extends MessageLookupByLibrary {
         "NewCustomersPhoneNumber":
             MessageLookupByLibrary.simpleMessage("رقم هاتف العميل الجديد"),
         "NoDetailsYet":
-            MessageLookupByLibrary.simpleMessage("لا توجد تفاصيل بعد"),
+            MessageLookupByLibrary.simpleMessage("لا توجد تفاصيل حتى الآن"),
+        "Pleasetryagain":
+            MessageLookupByLibrary.simpleMessage("يرجى المحاولة مرة أخرى"),
+        "ProductDetails": MessageLookupByLibrary.simpleMessage("تفاصيل المنتج"),
+        "ProductNameMustNotBeEmpty": MessageLookupByLibrary.simpleMessage(
+            "يجب ألا يكون اسم المنتج فارغًا"),
+        "ProductPriceMustNotBeEmpty": MessageLookupByLibrary.simpleMessage(
+            "يجب ألا يكون سعر المنتج فارغًا"),
+        "Productaddedsuccessfully":
+            MessageLookupByLibrary.simpleMessage("تمت إضافة المنتج بنجاح"),
+        "ProductsName": MessageLookupByLibrary.simpleMessage("اسم المنتج"),
+        "Productsprice": MessageLookupByLibrary.simpleMessage("سعر المنتج"),
         "SignOut": MessageLookupByLibrary.simpleMessage("تسجيل الخروج"),
-        "Thebeginmoney": MessageLookupByLibrary.simpleMessage("المال المبدئي"),
+        "Theamountofthededuction":
+            MessageLookupByLibrary.simpleMessage("مقدار الخصم"),
+        "Thebeginmoney": MessageLookupByLibrary.simpleMessage("المبلغ المبدئي"),
         "addCustomer": MessageLookupByLibrary.simpleMessage("إضافة عميل"),
+        "byWho": MessageLookupByLibrary.simpleMessage("بيد من"),
         "cansle": MessageLookupByLibrary.simpleMessage("إلغاء"),
         "changeTheDay": MessageLookupByLibrary.simpleMessage("تغيير اليوم"),
         "customersNames": MessageLookupByLibrary.simpleMessage("أسماء العملاء"),
+        "deductionmustnotbeempty": MessageLookupByLibrary.simpleMessage(
+            "يجب ألا يكون مقدار الخصم فارغًا"),
+        "deductionsuccessfully":
+            MessageLookupByLibrary.simpleMessage("تم الخصم بنجاح"),
         "edit": MessageLookupByLibrary.simpleMessage("تعديل"),
         "friday": MessageLookupByLibrary.simpleMessage("الجمعة"),
         "fullname": MessageLookupByLibrary.simpleMessage("الاسم الكامل"),
         "haveAccount":
             MessageLookupByLibrary.simpleMessage("هل لديك حساب بالفعل؟"),
         "internetError": MessageLookupByLibrary.simpleMessage(
-            "حدث خطأ، يرجى التحقق من الاتصال بالإنترنت"),
+            "حدث خطأ ما، يرجى التحقق من اتصال الإنترنت"),
         "login": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
         "loginEmail":
             MessageLookupByLibrary.simpleMessage("عنوان البريد الإلكتروني"),
@@ -72,10 +92,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "loginSuccess":
             MessageLookupByLibrary.simpleMessage("تم تسجيل الدخول بنجاح"),
         "monday": MessageLookupByLibrary.simpleMessage("الاثنين"),
-        "nameRe": MessageLookupByLibrary.simpleMessage("مطلوب الاسم"),
+        "nameRe": MessageLookupByLibrary.simpleMessage("الاسم مطلوب"),
         "noCustomersYet":
-            MessageLookupByLibrary.simpleMessage("لا يوجد عملاء بعد"),
-        "noResult": MessageLookupByLibrary.simpleMessage("لا توجد نتائج"),
+            MessageLookupByLibrary.simpleMessage("لا يوجد عملاء حتى الآن"),
+        "noResult":
+            MessageLookupByLibrary.simpleMessage("لم يتم العثور على نتائج"),
         "pleaseSelectDay":
             MessageLookupByLibrary.simpleMessage("يرجى اختيار يوم"),
         "saturday": MessageLookupByLibrary.simpleMessage("السبت"),
@@ -88,7 +109,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "هل أنت متأكد أنك تريد تغيير اليوم؟"),
         "thursday": MessageLookupByLibrary.simpleMessage("الخميس"),
         "totalAccount":
-            MessageLookupByLibrary.simpleMessage("إجمالي حساب اليوم"),
+            MessageLookupByLibrary.simpleMessage("إجمالي الحساب اليومي"),
         "transformToPDF": MessageLookupByLibrary.simpleMessage("تحويل إلى PDF"),
         "tuesday": MessageLookupByLibrary.simpleMessage("الثلاثاء"),
         "wednesday": MessageLookupByLibrary.simpleMessage("الأربعاء"),

@@ -4,6 +4,7 @@ import 'package:account_mangment_responsive/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
+import '../../../../../core/utils/constant.dart';
 import '../../../../auth_view/presentaion/views/widgets/custom_auth_button.dart';
 
 class AddCustomerButtonsMobilLayout extends StatelessWidget {
@@ -36,6 +37,7 @@ class AddCustomerButtonsMobilLayout extends StatelessWidget {
           width: 20,
         ),
         CustomButton(
+          color: defaultColor,
           isLoading: isLoading,
           text: S.of(context).Add,
           onPressed: () {

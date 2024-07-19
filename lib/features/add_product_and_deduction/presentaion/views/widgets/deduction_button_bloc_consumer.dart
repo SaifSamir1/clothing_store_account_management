@@ -3,7 +3,10 @@ import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../../../../../core/theme/app_style.dart';
+import '../../../../../core/utils/constant.dart';
 import '../../../../../core/utils/methods.dart';
+import '../../../../../generated/l10n.dart';
 import '../../../../auth_view/presentaion/views/widgets/custom_auth_button.dart';
 import '../../../../customer_detailes/data/models/all_new_details_for_the_customer.dart';
 import '../../../../home_view/data/models/customer_model.dart';
@@ -40,11 +43,11 @@ class _DeductionButtonBlocConsumerState
         AddProductAndDeductionState>(
       listener: (context, state) {
         if (state is ChangeCustomerMoneyError) {
-          showFlutterToastError('Please try again');
+          showFlutterToastError(S.of(context).Pleasetryagain);
           log(state.errorMessage);
         }
         if (state is ChangeCustomerMoneySuccess) {
-          showFlutterToastSuccess('The deduction was successful');
+          showFlutterToastSuccess(S.of(context).deductionsuccessfully);
         }
         if (state is AddProductSuccess) {
           updateTheMoney(context);
@@ -52,7 +55,9 @@ class _DeductionButtonBlocConsumerState
       },
       builder: (context, state) {
         return CustomButton(
-          text: 'Add',
+          textStyle: AppStyles.styleMedium16(context),
+          color: defaultColor,
+          text: S.of(context).Add,
           onPressed: () {
             sumAndDeduction =
                 sumAndDeduction + int.parse(widget.deductionController.text);

@@ -22,7 +22,7 @@ void showFlutterToastError(String message) {
 
 int getCustomerIndex({required String customerName, required context}) {
   int index = BlocProvider.of<HomeCubit>(context)
-      .allCustomersDetails!
+      .allCustomersDetails
       .allCustomer
       .indexWhere((element) => element.customerName!
           .toLowerCase()

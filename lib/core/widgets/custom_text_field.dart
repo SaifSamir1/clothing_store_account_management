@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../utils/app_style.dart';
+import '../theme/app_style.dart';
 
 class CustomTextFormField extends StatelessWidget {
   const CustomTextFormField({
@@ -48,7 +48,7 @@ class CustomTextFormField extends StatelessWidget {
               )
             : null,
         hintText: hintText,
-        hintStyle: AppStyles.styleRegular14(context),
+        hintStyle:AppStyles.styleMedium16(context),
         border: buildOutlineInputBorder(),
         enabledBorder: buildOutlineInputBorder(),
         focusedBorder: buildOutlineInputBorder(),

@@ -50,5 +50,19 @@
     "NewCustomersPhoneNumber" : "New Customer's Phone Number",
     "NewAccount" : "New Account",
     "Customersuccessfullyupdated" : "Customer successfully updated",
-    "ChangeCustomerInfo" : "Are you sure you want to change the customer information ?"
+    "ChangeCustomerInfo" : "Are you sure you want to change the customer information ?",
+    "ProductDetails" : "Product Details",
+    "ProductNameMustNotBeEmpty" : "Product name must not be empty",
+    "Productsprice" : "Product's price",
+    "ProductsName" : "Product's Name",
+    "ProductPriceMustNotBeEmpty" : "Product Price must not be empty",
+    "Pleasetryagain" : "Please try again",
+    "Productaddedsuccessfully" : "Product added successfully",
+    "DeductionDetails" : "Deduction Details",
+    "byWho" : "by Who",
+    "Theamountofthededuction" : "The amount of the deduction",
+    "deductionmustnotbeempty" : "the amount of the deduction must not be empty",
+    "deductionsuccessfully" : "The deduction was successful"
+
+
 }   

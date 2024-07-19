@@ -4,7 +4,7 @@ import 'package:account_mangment_responsive/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../../../core/utils/constant.dart';
-import '../../../../../core/utils/custome_error_widget.dart';
+import '../../../../../core/error/custome_error_widget.dart';
 import '../../manger/home_cubit.dart';
 import 'home_list_view.dart';
 import 'no_result_founded.dart';
@@ -48,12 +48,13 @@ class HomeViewBodyForms extends StatelessWidget {
         }
         return SliverToBoxAdapter(
           child: SizedBox(
-              height: 400,
-              child: Center(
-                child: CircularProgressIndicator(
-                  color: defaultColor,
-                ),
-              )),
+            height: 400,
+            child: Center(
+              child: CircularProgressIndicator(
+                color: defaultColor,
+              ),
+            ),
+          ),
         );
       },
     );

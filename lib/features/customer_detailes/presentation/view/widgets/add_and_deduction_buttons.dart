@@ -1,9 +1,11 @@
+import 'package:account_mangment_responsive/core/routing/routes.dart';
 import 'package:account_mangment_responsive/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 
-import '../../../../../core/utils/app_router.dart';
+import '../../../../../core/routing/app_router.dart';
+import '../../../../../core/utils/constant.dart';
 import '../../../../auth_view/presentaion/views/widgets/custom_auth_button.dart';
 import '../../../data/models/all_details_for_the_customer_model.dart';
 import '../../../data/models/all_new_details_for_the_customer.dart';
@@ -36,6 +38,7 @@ class _AddAndDeductionButtonsState extends State<AddAndDeductionButtons> {
       mainAxisAlignment: MainAxisAlignment.end,
       children: [
         CustomButton(
+          color: defaultColor,
             text: S.of(context).AddProduct,
             onPressed: () {
               AllNewDetailsForTheCustomerModel
@@ -46,7 +49,7 @@ class _AddAndDeductionButtonsState extends State<AddAndDeductionButtons> {
                       newMoney: BlocProvider.of<CustomerDetailsCubit>(context)
                           .customerInfo
                           .money!);
-              GoRouter.of(context).push(AppRouter.kAddProductView,
+              GoRouter.of(context).push(Routes.addProductView,
                   extra: allNewDetailsForTheCustomerModel);
             },
             minWidth: 100),
@@ -54,6 +57,7 @@ class _AddAndDeductionButtonsState extends State<AddAndDeductionButtons> {
           padding: const EdgeInsets.only(right: 10.0, left: 10),
           child: FittedBox(
               child: CustomButton(
+                  color: defaultColor,
                   text: S.of(context).Deduction,
                   onPressed: () {
                     AllNewDetailsForTheCustomerModel
@@ -65,7 +69,7 @@ class _AddAndDeductionButtonsState extends State<AddAndDeductionButtons> {
                                 BlocProvider.of<CustomerDetailsCubit>(context)
                                     .customerInfo
                                     .money!);
-                    GoRouter.of(context).push(AppRouter.kDeductionView,
+                    GoRouter.of(context).push(Routes.deductionView,
                         extra: allNewDetailsForTheCustomerModel);
                   },
                   minWidth: 100)),
