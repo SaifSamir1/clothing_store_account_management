@@ -1,6 +1,6 @@
 
 
-import 'package:account_mangment_responsive/core/utils/app_style.dart';
+import 'package:account_mangment_responsive/core/theme/app_style.dart';
 import 'package:flutter/material.dart';
 
 class CustomErrorWidget extends StatelessWidget {

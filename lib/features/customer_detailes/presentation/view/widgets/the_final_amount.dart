@@ -4,7 +4,7 @@ import 'package:account_mangment_responsive/features/customer_detailes/presentat
 import 'package:account_mangment_responsive/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import '../../../../../core/utils/app_style.dart';
+import '../../../../../core/theme/app_style.dart';
 import '../../../../../core/utils/constant.dart';
 import '../../../data/models/all_details_for_the_customer_model.dart';
 

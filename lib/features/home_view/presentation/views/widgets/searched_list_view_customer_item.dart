@@ -4,7 +4,7 @@
 import 'package:account_mangment_responsive/core/utils/global_variable.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../../core/utils/app_style.dart';
+import '../../../../../core/theme/app_style.dart';
 import '../../../../../core/utils/constant.dart';
 
 class SearchedListViewCustomerItem extends StatelessWidget {

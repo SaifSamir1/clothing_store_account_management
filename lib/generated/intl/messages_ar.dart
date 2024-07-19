@@ -72,7 +72,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "يجب ألا يكون مقدار الخصم فارغًا"),
         "deductionsuccessfully":
             MessageLookupByLibrary.simpleMessage("تم الخصم بنجاح"),
-        "edit": MessageLookupByLibrary.simpleMessage("تحرير"),
+        "edit": MessageLookupByLibrary.simpleMessage("تعديل"),
         "friday": MessageLookupByLibrary.simpleMessage("الجمعة"),
         "fullname": MessageLookupByLibrary.simpleMessage("الاسم الكامل"),
         "haveAccount":

@@ -4,7 +4,7 @@ import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'core/utils/app_router.dart';
+import 'core/routing/app_router.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});

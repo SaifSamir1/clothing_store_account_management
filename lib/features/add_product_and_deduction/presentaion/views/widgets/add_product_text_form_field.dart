@@ -4,6 +4,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../../../core/widgets/custom_text_field.dart';
+import '../../../../../generated/l10n.dart';
 
 class AddProductTextFormField extends StatelessWidget {
   const AddProductTextFormField({
@@ -22,20 +23,20 @@ class AddProductTextFormField extends StatelessWidget {
         child: Column(
           children: [
             CustomTextFormField(
-              hintText: 'Product\'s Name',
+              hintText: S.of(context).ProductsName,
               controller: nameController,
               keyBoardType: TextInputType.name,
               valedate: (value){
-                return '';
+                return S.of(context).ProductNameMustNotBeEmpty;
               },
             ),
             const SizedBox(height: 15,),
             CustomTextFormField(
-              hintText: 'Product\'s price',
+              hintText: S.of(context).Productsprice,
               controller: priceController,
               keyBoardType: TextInputType.number,
               valedate: (value){
-                return 'Product price must not be empty';
+                return S.of(context).ProductPriceMustNotBeEmpty;
               },
             ),
           ],

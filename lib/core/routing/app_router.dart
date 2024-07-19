@@ -15,80 +15,65 @@ import '../../features/customer_detailes/data/models/all_new_details_for_the_cus
 import '../../features/customer_detailes/data/repositry/customer_details_repo_impl.dart';
 import '../../features/customer_detailes/presentation/manger/customer_details_cubit.dart';
 import '../../features/customer_detailes/presentation/view/customer_detailes_view.dart';
-import 'hive_service.dart';
+import 'routes.dart';
 
 abstract class AppRouter {
-  static String kHomeView =
-      myBox!.get("notShowAuthScreen") == "true" ? '/' : '/homeView';
-  // static  String kHomeView = '/homeView';
-  static const kSplashView = '/SplashView';
-  static const kSignIn = '/kSignIn';
-  static String kSignUp =
-      myBox!.get("notShowAuthScreen") == "false" ? '/' : '/kSignUp';
-  // static String kSignUp = '/kSignUp';
-  static const kAddCustomer = '/kAddCustomer';
-  static const kEditCustomer = '/kEditCustomer';
-  static const kCustomerDetailsView = '/kCustomerDetailsView';
-  static const kAddProductView = '/kAddProductView';
-  static const kDeductionView = '/kDeductionView';
-  static const kSelectTheDay = '/kCountryNameView';
-
   static final router = GoRouter(
     routes: [
       GoRoute(
-        path: kSignUp,
+        path: Routes.signUp,
         builder: (context, state) => const AuthScreenSignUp(),
       ),
       GoRoute(
-        path: kSignIn,
+        path: Routes.signIn,
         builder: (context, state) => const AuthScreenSignIn(),
       ),
       GoRoute(
-          path: kHomeView,
+          path: Routes.homeView,
           builder: (context, state) {
             return BlocProvider(
                 create: (context) => HomeCubit(HomeRepoImpl()),
                 child: const HomeView());
           }),
       GoRoute(
-        path: kSelectTheDay,
+        path: Routes.selectTheDay,
         builder: (context, state) => const SelectTheDayView(),
       ),
       GoRoute(
-        path: kAddCustomer,
+        path: Routes.addCustomer,
         builder: (context, state) => const AddCustomerView(),
       ),
       GoRoute(
-        path: kEditCustomer,
+        path: Routes.editCustomer,
         builder: (context, state) => EditCustomerView(
           allDetailsForTheCustomerModel:
-              state.extra as AllDetailsForTheCustomerModel,
+          state.extra as AllDetailsForTheCustomerModel,
         ),
       ),
       GoRoute(
-        path: kCustomerDetailsView,
+        path: Routes.customerDetailsView,
         builder: (context, state) => BlocProvider(
           create: (context) => CustomerDetailsCubit(
             CustomerDetailsRepoImpl(),
           ),
           child: CustomerDetailsView(
             allDetailsForTheCustomerModel:
-                state.extra as AllDetailsForTheCustomerModel,
+            state.extra as AllDetailsForTheCustomerModel,
           ),
         ),
       ),
       GoRoute(
-        path: kAddProductView,
+        path: Routes.addProductView,
         builder: (context, state) => AddProductView(
           allDetailsForTheCustomerModel:
-              state.extra as AllNewDetailsForTheCustomerModel,
+          state.extra as AllNewDetailsForTheCustomerModel,
         ),
       ),
       GoRoute(
-        path: kDeductionView,
+        path: Routes.deductionView,
         builder: (context, state) => DeductionView(
           allDetailsForTheCustomerModel:
-              state.extra as AllNewDetailsForTheCustomerModel,
+          state.extra as AllNewDetailsForTheCustomerModel,
         ),
       ),
     ],

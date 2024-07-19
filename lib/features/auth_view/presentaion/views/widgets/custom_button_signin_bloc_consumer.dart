@@ -1,8 +1,7 @@
+import 'package:account_mangment_responsive/core/routing/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
-
-import '../../../../../core/utils/app_router.dart';
 import '../../../../../core/utils/hive_service.dart';
 import '../../../../../core/utils/methods.dart';
 import '../../../../../generated/l10n.dart';
@@ -28,7 +27,7 @@ class CustomButtonSignInBlocConsumer extends StatelessWidget {
         if (state is SignInSuccess) {
           showFlutterToastSuccess(S.of(context).loginSuccess);
           myBox!.put("notShowAuthScreen", "true");
-          GoRouter.of(context).pushReplacement(AppRouter.kSelectTheDay);
+          GoRouter.of(context).pushReplacement(Routes.selectTheDay);
         }
         if (state is SignInError) {
           showFlutterToastError(state.errorMessage);

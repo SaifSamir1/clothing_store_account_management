@@ -1,9 +1,8 @@
-import 'package:account_mangment_responsive/core/utils/app_router.dart';
 import 'package:account_mangment_responsive/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-
-import '../../../../../core/utils/app_style.dart';
+import '../../../../../core/routing/routes.dart';
+import '../../../../../core/theme/app_style.dart';
 import '../../../../../core/utils/constant.dart';
 
 class HaveAccount extends StatelessWidget {
@@ -25,7 +24,7 @@ class HaveAccount extends StatelessWidget {
             ),
             TextButton(
               onPressed: () {
-                GoRouter.of(context).push(AppRouter.kSignIn);
+                GoRouter.of(context).push(Routes.signIn);
               },
               child: Text(
                 S.of(context).login,

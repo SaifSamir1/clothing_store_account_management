@@ -1,7 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../../core/utils/app_style.dart';
+import '../../../../../core/theme/app_style.dart';
 import '../../../../../core/utils/constant.dart';
 import '../../../../add_product_and_deduction/data/models/product_model.dart';
 import '../../../data/models/all_details_for_the_customer_model.dart';

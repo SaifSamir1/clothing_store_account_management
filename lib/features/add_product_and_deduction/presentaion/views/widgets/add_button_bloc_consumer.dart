@@ -1,9 +1,12 @@
 import 'dart:developer';
 
+import 'package:account_mangment_responsive/core/theme/app_style.dart';
 import 'package:account_mangment_responsive/features/home_view/data/models/customer_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import '../../../../../core/utils/constant.dart';
 import '../../../../../core/utils/methods.dart';
+import '../../../../../generated/l10n.dart';
 import '../../../../auth_view/presentaion/views/widgets/custom_auth_button.dart';
 import '../../../../customer_detailes/data/models/all_new_details_for_the_customer.dart';
 import '../../../data/models/product_model.dart';
@@ -35,11 +38,11 @@ class _AddButtonBlocConsumerState extends State<AddButtonBlocConsumer> {
         AddProductAndDeductionState>(
       listener: (context, state) {
         if (state is ChangeCustomerMoneyError) {
-          showFlutterToastError('Please try again');
+          showFlutterToastError(S.of(context).Pleasetryagain);
           log(state.errorMessage);
         }
         if (state is ChangeCustomerMoneySuccess) {
-          showFlutterToastSuccess('Product added successfully');
+          showFlutterToastSuccess(S.of(context).Productaddedsuccessfully);
         }
         if (state is AddProductSuccess)
           {
@@ -48,7 +51,9 @@ class _AddButtonBlocConsumerState extends State<AddButtonBlocConsumer> {
       },
       builder: (context, state) {
         return CustomButton(
-          text: 'Add',
+          textStyle: AppStyles.styleMedium16(context),
+          color: defaultColor,
+          text: S.of(context).Add,
           onPressed: () {
                 sumAndDeduction = sumAndDeduction + int.parse(widget.priceController.text);
                 addProduct(context);

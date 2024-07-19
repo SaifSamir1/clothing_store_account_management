@@ -1,10 +1,9 @@
+import 'package:account_mangment_responsive/core/routing/routes.dart';
 import 'package:account_mangment_responsive/core/utils/constant.dart';
 import 'package:account_mangment_responsive/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
-
-import '../../../../../core/utils/app_router.dart';
 import '../../../../../core/utils/hive_service.dart';
 import '../../../../../core/utils/methods.dart';
 import '../../../data/models/user_model.dart';
@@ -35,7 +34,7 @@ class SignUpButtonBlockConsumer extends StatelessWidget {
         }
         if (state is StoreCountrySuccess) {
           showFlutterToastSuccess(S.of(context).signupSuccess);
-          GoRouter.of(context).pushReplacement(AppRouter.kSelectTheDay);
+          GoRouter.of(context).pushReplacement(Routes.selectTheDay);
         }
         if (state is SignUpError) {
           showFlutterToastError(state.errorMessage);

@@ -1,7 +1,7 @@
 import 'package:account_mangment_responsive/generated/l10n.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../../core/utils/app_style.dart';
+import '../../../../../core/theme/app_style.dart';
 
 class SelectTheDayHeader extends StatelessWidget {
   const SelectTheDayHeader({

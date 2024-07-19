@@ -10,9 +10,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-
-import '../../../../../core/utils/app_router.dart';
-import '../../../../../core/utils/app_style.dart';
+import '../../../../../core/routing/routes.dart';
+import '../../../../../core/theme/app_style.dart';
 import '../../../../../core/utils/constant.dart';
 
 class DoNotHaveAccount extends StatelessWidget {
@@ -32,7 +31,7 @@ class DoNotHaveAccount extends StatelessWidget {
             TextButton(
               onPressed: ()
               {
-                GoRouter.of(context).push(AppRouter.kSignIn);
+                GoRouter.of(context).push(Routes.signIn);
               },
               child: Text(
                 'Sign Up',

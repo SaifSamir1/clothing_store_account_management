@@ -11,12 +11,14 @@ class EditCustomerCubit extends Cubit<EditCustomerState> {
 
   AddEditCustomerRepo addEditCustomerRepo;
 
-  Future<void> editCustomerInformation({required String customerId,required CustomerModel newData}) async
-  {
+  Future<void> editCustomerInformation(
+      {required String customerId, required CustomerModel newData}) async {
     emit(EditCustomerLoading());
-    var result = await addEditCustomerRepo.editCustomerInfo(customerId: customerId,newData:newData);
-
-    result.fold((error){
+    var result = await addEditCustomerRepo.editCustomerInfo(
+      customerId: customerId,
+      newData: newData,
+    );
+    result.fold((error) {
       emit(EditCustomerError(errorMessage: error.toString()));
     }, (success) {
       emit(EditCustomerSuccess());

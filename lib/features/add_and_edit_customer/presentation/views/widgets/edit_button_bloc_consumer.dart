@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 
-import '../../../../../core/utils/app_router.dart';
+import '../../../../../core/routing/routes.dart';
+import '../../../../../core/theme/app_style.dart';
+import '../../../../../core/utils/constant.dart';
 import '../../../../../core/utils/methods.dart';
 import '../../../../../core/widgets/custom_alert_dialoge.dart';
 import '../../../../auth_view/presentaion/views/widgets/custom_auth_button.dart';
@@ -31,7 +33,7 @@ class EditButtonBlocConsumer extends StatelessWidget {
       listener: (context, state) {
         if (state is EditCustomerSuccess) {
           showFlutterToastSuccess(S.of(context).Customersuccessfullyupdated);
-          GoRouter.of(context).pushReplacement(AppRouter.kHomeView);
+          GoRouter.of(context).pushReplacement(Routes.homeView);
         }
         if (state is EditCustomerError) {
           showFlutterToastError(state.errorMessage);
@@ -39,6 +41,8 @@ class EditButtonBlocConsumer extends StatelessWidget {
       },
       builder: (context, state) {
         return CustomButton(
+          textStyle: AppStyles.styleMedium16(context),
+          color: defaultColor,
           text: S.of(context).edit,
           onPressed: () {
             _showCustomDialog(context, state, () {
@@ -66,7 +70,8 @@ class EditButtonBlocConsumer extends StatelessWidget {
     );
     BlocProvider.of<EditCustomerCubit>(context).editCustomerInformation(
         customerId: allDetailsForTheCustomerModel.customerId,
-        newData: newCustomerModel);
+        newData: newCustomerModel,
+    );
   }
 }
 

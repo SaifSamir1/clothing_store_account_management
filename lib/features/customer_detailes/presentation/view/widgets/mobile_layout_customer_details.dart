@@ -1,4 +1,5 @@
-import 'package:account_mangment_responsive/core/utils/app_router.dart';
+import 'package:account_mangment_responsive/core/routing/app_router.dart';
+import 'package:account_mangment_responsive/core/routing/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -24,7 +25,7 @@ class MobileLayoutCustomerDetails extends StatelessWidget {
           icon: Icons.person,
           actionIcon: Icons.edit,
           actionButtonOnPressed: () {
-            GoRouter.of(context).push(AppRouter.kEditCustomer,
+            GoRouter.of(context).push(Routes.editCustomer,
                 extra: allDetailsForTheCustomerModel);
           },
         ),
