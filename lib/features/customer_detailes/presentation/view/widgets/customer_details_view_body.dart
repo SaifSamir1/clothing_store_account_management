@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../../data/models/all_details_for_the_customer_model.dart';
+import 'mobile_layout_account_details.dart';
 import 'mobile_layout_customer_details.dart';
 
 class CustomerDetailsViewBody extends StatelessWidget {
@@ -9,7 +10,7 @@ class CustomerDetailsViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MobileLayoutCustomerDetails(
+    return MobilLayoutAccountDetails(
       allDetailsForTheCustomerModel: allDetailsForTheCustomerModel,
     );
   }

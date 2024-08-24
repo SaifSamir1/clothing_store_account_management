@@ -10,11 +10,11 @@ class DeductionView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     GlobalKey<ScaffoldState> scaffoldKey = GlobalKey();
-    return Scaffold(
-      key: scaffoldKey,
-      backgroundColor: const Color(0xffFFFFFF),
-      body: SafeArea(
-        child: DeductionProductViewBody(
+    return SafeArea(
+      child: Scaffold(
+        key: scaffoldKey,
+        backgroundColor: const Color(0xffFFFFFF),
+        body: DeductionProductViewBody(
           allDetailsForTheCustomerModel: allDetailsForTheCustomerModel,
         ),
       ),

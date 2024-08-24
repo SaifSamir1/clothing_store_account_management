@@ -31,14 +31,14 @@ class MobileLayoutDeductionView extends StatelessWidget {
                 height: 20,
               ),
               Padding(
-                padding: const EdgeInsets.only(left: 10.0),
+                padding: const EdgeInsetsDirectional.only(start: 10),
                 child: Text(
                   '- ${S.of(context).DeductionDetails}',
                   style: AppStyles.styleSemiBold24WithoutFontFamily(context),
                 ),
               ),
               FittedBox(
-                  child: MobileLayoutDeductionDetails(
+                  child: DeductionDetails(
                 allDetailsForTheCustomerModel: allDetailsForTheCustomerModel,
               )),
             ],

@@ -66,6 +66,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "addCustomer": MessageLookupByLibrary.simpleMessage("إضافة عميل"),
         "byWho": MessageLookupByLibrary.simpleMessage("بيد من"),
         "cansle": MessageLookupByLibrary.simpleMessage("إلغاء"),
+        "changeLang": MessageLookupByLibrary.simpleMessage("تغير اللغه"),
         "changeTheDay": MessageLookupByLibrary.simpleMessage("تغيير اليوم"),
         "customersNames": MessageLookupByLibrary.simpleMessage("أسماء العملاء"),
         "deductionmustnotbeempty": MessageLookupByLibrary.simpleMessage(
@@ -101,6 +102,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("يرجى اختيار يوم"),
         "saturday": MessageLookupByLibrary.simpleMessage("السبت"),
         "selTheday": MessageLookupByLibrary.simpleMessage("اختر اليوم"),
+        "selectLang": MessageLookupByLibrary.simpleMessage("اختيار اللغه"),
+        "setting": MessageLookupByLibrary.simpleMessage("الاعدادات"),
+        "signUp": MessageLookupByLibrary.simpleMessage(
+            "هل انت متاكد انك تريد تسجيل الخروج ؟"),
         "signup": MessageLookupByLibrary.simpleMessage("إنشاء حساب"),
         "signupSuccess":
             MessageLookupByLibrary.simpleMessage("تم إنشاء الحساب بنجاح"),

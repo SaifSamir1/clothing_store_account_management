@@ -24,7 +24,9 @@ class AddProductButtonsMobileLayout extends StatelessWidget {
     return Row(
       children: [
         CustomButton(
-          textStyle: AppStyles.styleMedium16(context),
+          textStyle: AppStyles.styleMedium16(context).copyWith(
+            color: Colors.white
+          ),
           text: S.of(context).cansle,
           onPressed: () {
             GoRouter.of(context).pop();

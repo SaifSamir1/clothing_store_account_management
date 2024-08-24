@@ -1,7 +1,7 @@
 import 'dart:developer';
 
 import 'package:account_mangment_responsive/core/routing/app_router.dart';
-import 'package:account_mangment_responsive/core/utils/hive_service.dart';
+import 'package:account_mangment_responsive/core/caching/hive/my_box.dart';
 import 'package:account_mangment_responsive/core/utils/methods.dart';
 import 'package:account_mangment_responsive/features/auth_view/presentaion/manger/auth_cubit.dart';
 import 'package:account_mangment_responsive/generated/l10n.dart';

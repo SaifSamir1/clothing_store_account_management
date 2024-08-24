@@ -1,4 +1,4 @@
-import '../utils/hive_service.dart';
+import '../caching/hive/my_box.dart';
 
 class Routes {
   static String homeView =
@@ -13,4 +13,6 @@ class Routes {
   static const String addProductView = '/kAddProductView';
   static const String deductionView = '/kDeductionView';
   static const String selectTheDay = '/kCountryNameView';
+  static const String totalAmount = '/KTotalAmount';
+  static const String settingScreen = '/KSettingScreen';
 }

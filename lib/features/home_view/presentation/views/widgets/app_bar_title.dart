@@ -16,7 +16,7 @@ class AppBarTitle extends StatelessWidget {
       children: [
         Text(
           title,
-          style: AppStyles.styleSemiBold24WithoutFontFamily(context)
+          style: AppStyles.styleSemiBold28(context)
               .copyWith(color: Colors.white),
         ),
       ],

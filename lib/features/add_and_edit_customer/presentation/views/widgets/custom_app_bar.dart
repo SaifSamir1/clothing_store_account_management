@@ -1,6 +1,7 @@
 import 'package:account_mangment_responsive/features/auth_view/presentaion/views/widgets/custom_auth_button.dart';
 import 'package:account_mangment_responsive/generated/l10n.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 import '../../../../../core/utils/constant.dart';
 import '../../../../home_view/presentation/views/widgets/app_bar_title.dart';
@@ -21,7 +22,7 @@ class CustomAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(vertical: 5),
+      padding: const EdgeInsetsDirectional.symmetric(vertical: 5),
       color: defaultColor,
       width: double.infinity,
       child: Row(
@@ -57,4 +58,23 @@ class CustomAppBar extends StatelessWidget {
       ),
     );
   }
+}
+
+
+AppBar buildCustomAppBar({
+  required String title,
+  required BuildContext context,
+  List<Widget>? action,
+}) {
+  return AppBar(
+    leading: BackButton(
+      color: Colors.white,
+      onPressed: (){
+        GoRouter.of(context).pop();
+      },
+    ),
+    backgroundColor: defaultColor,
+    title:AppBarTitle(title: title),
+    actions:action ,
+  );
 }

@@ -1,7 +1,5 @@
-import 'package:account_mangment_responsive/features/add_product_and_deduction/data/models/product_model.dart';
 import 'package:account_mangment_responsive/features/customer_detailes/presentation/manger/customer_details_cubit.dart';
 import 'package:account_mangment_responsive/generated/l10n.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -30,7 +28,9 @@ class MobilLayoutAccountDetailsBody extends StatelessWidget {
             ),
           );
         }
-        if (state is GetCustomerDetailsLoading) {
+        if (state is GetCustomerDetailsLoading ||
+            context.read<CustomerDetailsCubit>().customerProductDetails ==
+                null) {
           return SizedBox(
               height: 500,
               child: Center(

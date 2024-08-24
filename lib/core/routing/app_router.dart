@@ -1,8 +1,10 @@
+import 'package:account_mangment_responsive/core/routing/animation_route.dart';
+import 'package:account_mangment_responsive/features/auth_view/data/models/user_model.dart';
 import 'package:account_mangment_responsive/features/auth_view/presentaion/views/auth_screen_signup.dart';
 import 'package:account_mangment_responsive/features/auth_view/presentaion/views/country_name.dart';
-import 'package:account_mangment_responsive/features/home_view/data/reposetry/home_repo_impl.dart';
-import 'package:account_mangment_responsive/features/home_view/presentation/manger/home_cubit.dart';
+import 'package:account_mangment_responsive/features/home_view/presentation/views/account_total_mony_screen.dart';
 import 'package:account_mangment_responsive/features/home_view/presentation/views/home_view.dart';
+import 'package:account_mangment_responsive/features/settings/ui/setting_screen.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import '../../features/add_and_edit_customer/presentation/views/add_customer_view.dart';
@@ -22,59 +24,89 @@ abstract class AppRouter {
     routes: [
       GoRoute(
         path: Routes.signUp,
-        builder: (context, state) => const AuthScreenSignUp(),
+        pageBuilder: (context, state) {
+          return fadeTransitionPage(const AuthScreenSignUp());
+        },
       ),
       GoRoute(
         path: Routes.signIn,
-        builder: (context, state) => const AuthScreenSignIn(),
+        pageBuilder: (context, state) {
+          return fadeTransitionPage(const AuthScreenSignIn());
+        },
       ),
       GoRoute(
-          path: Routes.homeView,
-          builder: (context, state) {
-            return BlocProvider(
-                create: (context) => HomeCubit(HomeRepoImpl()),
-                child: const HomeView());
-          }),
+        path: Routes.homeView,
+        pageBuilder: (context, state) {
+          return fadeTransitionPage(const HomeView());
+        },
+      ),
       GoRoute(
         path: Routes.selectTheDay,
-        builder: (context, state) => const SelectTheDayView(),
+        pageBuilder: (context, state) {
+          return fadeTransitionPage(const SelectTheDayView());
+        },
       ),
       GoRoute(
         path: Routes.addCustomer,
-        builder: (context, state) => const AddCustomerView(),
+        pageBuilder: (context, state) {
+          return fadeTransitionPage(const AddCustomerView());
+        },
       ),
       GoRoute(
         path: Routes.editCustomer,
-        builder: (context, state) => EditCustomerView(
-          allDetailsForTheCustomerModel:
-          state.extra as AllDetailsForTheCustomerModel,
-        ),
+        pageBuilder: (context, state) {
+          return fadeTransitionPage(EditCustomerView(
+            allDetailsForTheCustomerModel:
+                state.extra as AllDetailsForTheCustomerModel,
+          ));
+        },
       ),
       GoRoute(
         path: Routes.customerDetailsView,
-        builder: (context, state) => BlocProvider(
-          create: (context) => CustomerDetailsCubit(
-            CustomerDetailsRepoImpl(),
-          ),
-          child: CustomerDetailsView(
-            allDetailsForTheCustomerModel:
-            state.extra as AllDetailsForTheCustomerModel,
-          ),
-        ),
+        pageBuilder: (context, state) {
+          final allData  = state.extra as AllDetailsForTheCustomerModel;
+          return fadeTransitionPage(
+            BlocProvider(
+              create: (context) => CustomerDetailsCubit(
+                CustomerDetailsRepoImpl(),
+              )..getCustomerDetailsBody(customerId: allData.customerId)..getCustomerInfo(customerId: allData.customerId),
+              child: CustomerDetailsView(
+                allDetailsForTheCustomerModel:
+                allData,
+              ),
+            ),
+          );
+        },
       ),
       GoRoute(
         path: Routes.addProductView,
-        builder: (context, state) => AddProductView(
-          allDetailsForTheCustomerModel:
-          state.extra as AllNewDetailsForTheCustomerModel,
-        ),
+        pageBuilder: (context, state) {
+          return fadeTransitionPage(AddProductView(
+            allDetailsForTheCustomerModel:
+                state.extra as AllNewDetailsForTheCustomerModel,
+          ));
+        },
       ),
       GoRoute(
         path: Routes.deductionView,
-        builder: (context, state) => DeductionView(
-          allDetailsForTheCustomerModel:
-          state.extra as AllNewDetailsForTheCustomerModel,
-        ),
+        pageBuilder: (context, state) {
+          return fadeTransitionPage(DeductionView(
+            allDetailsForTheCustomerModel:
+                state.extra as AllNewDetailsForTheCustomerModel,
+          ));
+        },
+      ),
+      GoRoute(
+        path: Routes.totalAmount,
+        pageBuilder: (context, state) {
+          return fadeTransitionPage(const AccountTotalMoneyScreen());
+        },
+      ),
+      GoRoute(
+        path: Routes.settingScreen,
+        pageBuilder: (context, state) {
+          return fadeTransitionPage(const SettingsScreen());
+        },
       ),
     ],
   );

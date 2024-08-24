@@ -41,7 +41,11 @@ class HomeViewBodyForms extends StatelessWidget {
           return searchTextController.text.isNotEmpty &&
                   searchedForCharacters.isEmpty
               ? const SliverToBoxAdapter(
-                  child: SizedBox(height: 400, child: NoResultFound()))
+                  child: SizedBox(
+                    height: 400,
+                    child: NoResultFound(),
+                  ),
+                )
               : searchTextController.text.isEmpty
                   ? const HomeListView()
                   : const SearchListView();

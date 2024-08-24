@@ -28,14 +28,16 @@ class HomeListView extends StatelessWidget {
                 .length,
             itemBuilder: (BuildContext context, int index) {
               return GestureDetector(
-                  onTap: () {
-                    navigateToCustomerDetailsScreen(index, context);
-                  },
-                  child: AspectRatio(
-                      aspectRatio: 4.5,
-                      child: CustomerItem(
-                        index: index,
-                      )));
+                onTap: () {
+                  navigateToCustomerDetailsScreen(index, context);
+                },
+                child: AspectRatio(
+                  aspectRatio: 4.5,
+                  child: CustomerItem(
+                    index: index,
+                  ),
+                ),
+              );
             },
           );
   }
@@ -50,7 +52,7 @@ class HomeListView extends StatelessWidget {
                 .allCustomersDetails
                 .docs[index]
                 .id);
-    GoRouter.of(context).push(Routes.customerDetailsView,
-        extra: allDetailsForTheCustomerModel);
+    GoRouter.of(context)
+        .push(Routes.customerDetailsView, extra: allDetailsForTheCustomerModel);
   }
 }

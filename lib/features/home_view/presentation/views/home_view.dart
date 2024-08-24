@@ -26,6 +26,8 @@ class _HomeViewState extends State<HomeView> {
   Future<void> _getAllCustomers() async {
     var homeCubit = BlocProvider.of<HomeCubit>(context);
     await homeCubit.getAllCustomers();
+    await homeCubit.getUserDetails();
+
   }
 
   @override

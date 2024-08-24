@@ -12,11 +12,11 @@ class EditCustomerView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     GlobalKey<ScaffoldState> scaffoldKey = GlobalKey();
-    return Scaffold(
-      key: scaffoldKey,
-      backgroundColor: const Color(0xffFFFFFF),
-      body: SafeArea(
-        child: EditCustomerViewBody(
+    return SafeArea(
+      child: Scaffold(
+        key: scaffoldKey,
+        backgroundColor: const Color(0xffFFFFFF),
+        body: EditCustomerViewBody(
           allDetailsForTheCustomerModel: allDetailsForTheCustomerModel,
         ),
       ),

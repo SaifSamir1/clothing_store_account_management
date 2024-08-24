@@ -48,7 +48,7 @@ class CustomTextFormField extends StatelessWidget {
               )
             : null,
         hintText: hintText,
-        hintStyle:AppStyles.styleMedium16(context),
+        hintStyle:AppStyles.styleSemiBold20(context),
         border: buildOutlineInputBorder(),
         enabledBorder: buildOutlineInputBorder(),
         focusedBorder: buildOutlineInputBorder(),

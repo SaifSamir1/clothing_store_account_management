@@ -6,8 +6,8 @@ import '../../manger/add_product-and_deduction_cubit/add_product_and_deduction_c
 import 'dedction_text_form_fileds.dart';
 import 'deduction_buttons_mobile_layout.dart';
 
-class MobileLayoutDeductionDetails extends StatefulWidget {
-  const MobileLayoutDeductionDetails({
+class DeductionDetails extends StatefulWidget {
+  const DeductionDetails({
     super.key,
     required this.allDetailsForTheCustomerModel,
   });
@@ -15,12 +15,12 @@ class MobileLayoutDeductionDetails extends StatefulWidget {
   final AllNewDetailsForTheCustomerModel allDetailsForTheCustomerModel;
 
   @override
-  State<MobileLayoutDeductionDetails> createState() =>
-      _MobileLayoutDeductionDetailsState();
+  State<DeductionDetails> createState() =>
+      _DeductionDetailsState();
 }
 
-class _MobileLayoutDeductionDetailsState
-    extends State<MobileLayoutDeductionDetails> {
+class _DeductionDetailsState
+    extends State<DeductionDetails> {
   TextEditingController byWhoController = TextEditingController();
   TextEditingController deductionController = TextEditingController();
   GlobalKey<FormState> formKey = GlobalKey();
@@ -55,7 +55,7 @@ class _MobileLayoutDeductionDetailsState
             BlocProvider(
               create: (context) =>
                   AddProductAndDeductionCubit(AddProductAndDeductionRepoImpl()),
-              child: DeductionButtonsMobileLayout(
+              child: DeductionButtons(
                 formKey: formKey,
                 allDetailsForTheCustomerModel:
                     widget.allDetailsForTheCustomerModel,

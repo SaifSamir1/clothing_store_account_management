@@ -51,7 +51,9 @@ class _AddButtonBlocConsumerState extends State<AddButtonBlocConsumer> {
       },
       builder: (context, state) {
         return CustomButton(
-          textStyle: AppStyles.styleMedium16(context),
+          textStyle: AppStyles.styleMedium16(context).copyWith(
+              color: Colors.white
+          ),
           color: defaultColor,
           text: S.of(context).Add,
           onPressed: () {

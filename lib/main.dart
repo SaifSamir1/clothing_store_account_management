@@ -1,12 +1,14 @@
 import 'package:account_mangment_responsive/core/utils/pdf_service.dart';
 import 'package:bloc/bloc.dart';
+import 'package:device_preview/device_preview.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'core/caching/hive/language_cache_helper.dart';
 import 'core/utils/block_observer.dart';
 import 'core/utils/constant.dart';
-import 'core/utils/hive_service.dart';
+import 'core/caching/hive/my_box.dart';
 import 'my_app.dart';
 
 void main() async {
@@ -19,12 +21,16 @@ void main() async {
   ]);
   PdfService.init();
   myBox = await openHiveBox("saifBox");
+  await LanguageCacheHelper.init();
   showAuthScreen();
   userId = FirebaseAuth.instance.currentUser?.uid ?? '';
-
   runApp(
-    const MyApp(),
+    DevicePreview(
+      enabled: true,
+      builder: (context) => const MyApp(), // Wrap your app
+    ),
   );
+
 }
 
 Future<FirebaseApp> firebaseInitialization() {
@@ -38,9 +44,13 @@ Future<FirebaseApp> firebaseInitialization() {
 }
 
 void showAuthScreen() {
-  if (myBox!.get("notShowAuthScreen") == "true") {
+  if (myBox!.get("notShowAuthScreen") == "true"){
     myBox!.put("notShowAuthScreen", "true");
   } else {
     myBox!.put("notShowAuthScreen", "false");
   }
+}
+
+void localizationSetup(){
+
 }

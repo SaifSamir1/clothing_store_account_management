@@ -3,8 +3,9 @@ import 'package:account_mangment_responsive/features/home_view/presentation/view
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../../../../../core/cubits/language_cubit/language_cubit.dart';
 import '../../../../../core/utils/constant.dart';
-import '../../../../../core/utils/hive_service.dart';
+import '../../../../../core/caching/hive/my_box.dart';
 import '../../manger/home_cubit.dart';
 import 'app_bar_title.dart';
 
@@ -22,8 +23,12 @@ AppBar buildCustomAppBar(
               onChanged: onChange,
             );
           } else {
-            return AppBarTitle(
-              title: myBox!.get("countryName"),
+            return BlocBuilder<LanguageCubit, ChangeLanguageState>(
+              builder: (context, state) {
+                return AppBarTitle(
+                  title: myBox!.get("countryName"),
+                );
+              },
             );
           }
         },

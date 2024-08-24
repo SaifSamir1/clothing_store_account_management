@@ -3,6 +3,7 @@ import 'package:account_mangment_responsive/features/auth_view/data/models/user_
 import 'package:account_mangment_responsive/features/home_view/data/models/all_customers_details.dart';
 import 'package:account_mangment_responsive/features/home_view/data/reposetry/home_repo.dart';
 import 'package:bloc/bloc.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:meta/meta.dart';
 
@@ -63,7 +64,7 @@ class HomeCubit extends Cubit<HomeState> {
   }
 
   UserInfoModel? userInfoModel;
-  void getUserDetails() async {
+  Future<void> getUserDetails() async {
     emit(GetUserInfoLoading());
     var result = await homeRepo.getUserDetails();
     result.fold((error) {
@@ -71,6 +72,14 @@ class HomeCubit extends Cubit<HomeState> {
     }, (userInfo) {
       userInfoModel = userInfo;
       emit(GetUserInfoSuccess());
+    });
+  }
+
+  Future<void> logOut() async
+  {
+    emit(SignOutLoading());
+    await FirebaseAuth.instance.signOut().then((value){
+      emit(SignOutSuccess());
     });
   }
 }
