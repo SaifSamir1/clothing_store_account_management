@@ -66,5 +66,7 @@
     "setting" : "Settings",
     "changeLang" : "Change Language",
     "selectLang" : "Select Language",
-    "signUp" : "Are you sure you want to sign up ?"
+    "signUp" : "Are you sure you want to sign up ?",
+    "donthaveAccount" : "Don't have an account ? "
+
 }   

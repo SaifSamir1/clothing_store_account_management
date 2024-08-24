@@ -76,6 +76,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "the amount of the deduction must not be empty"),
         "deductionsuccessfully": MessageLookupByLibrary.simpleMessage(
             "The deduction was successful"),
+        "donthaveAccount":
+            MessageLookupByLibrary.simpleMessage("Don\'t have an account ? "),
         "edit": MessageLookupByLibrary.simpleMessage("Edit"),
         "friday": MessageLookupByLibrary.simpleMessage("Friday"),
         "fullname": MessageLookupByLibrary.simpleMessage("full name "),
