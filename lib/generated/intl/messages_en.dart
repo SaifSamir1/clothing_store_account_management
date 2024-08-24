@@ -66,10 +66,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "Thebeginmoney":
             MessageLookupByLibrary.simpleMessage("The begin money "),
         "addCustomer": MessageLookupByLibrary.simpleMessage("Add Customer"),
+        "backToLogin": MessageLookupByLibrary.simpleMessage("Back to Login"),
         "byWho": MessageLookupByLibrary.simpleMessage("by Who"),
         "cansle": MessageLookupByLibrary.simpleMessage("Cancel"),
         "changeLang": MessageLookupByLibrary.simpleMessage("Change Language"),
         "changeTheDay": MessageLookupByLibrary.simpleMessage("Change the day"),
+        "checkYourEmail":
+            MessageLookupByLibrary.simpleMessage("Check your email now"),
         "customersNames":
             MessageLookupByLibrary.simpleMessage("Customers\'s Names"),
         "deductionmustnotbeempty": MessageLookupByLibrary.simpleMessage(
@@ -79,6 +82,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "donthaveAccount":
             MessageLookupByLibrary.simpleMessage("Don\'t have an account ? "),
         "edit": MessageLookupByLibrary.simpleMessage("Edit"),
+        "emailValidate": MessageLookupByLibrary.simpleMessage(
+            "Please enter valid email address"),
+        "forgetPassword":
+            MessageLookupByLibrary.simpleMessage("Forget password"),
         "friday": MessageLookupByLibrary.simpleMessage("Friday"),
         "fullname": MessageLookupByLibrary.simpleMessage("full name "),
         "haveAccount":
@@ -100,11 +107,18 @@ class MessageLookup extends MessageLookupByLibrary {
         "noCustomersYet":
             MessageLookupByLibrary.simpleMessage("No Customer Yet"),
         "noResult": MessageLookupByLibrary.simpleMessage("No Result Found"),
+        "passwordResetDetails": MessageLookupByLibrary.simpleMessage(
+            "Enter your email address below. We will send you an email with instructions to reset your password."),
         "pleaseSelectDay":
             MessageLookupByLibrary.simpleMessage("Please select a day"),
+        "resetPassword":
+            MessageLookupByLibrary.simpleMessage("Reset Your Password"),
         "saturday": MessageLookupByLibrary.simpleMessage("Saturday"),
         "selTheday": MessageLookupByLibrary.simpleMessage("Sleect the Day"),
         "selectLang": MessageLookupByLibrary.simpleMessage("Select Language"),
+        "sendNewPasswordSuccess": MessageLookupByLibrary.simpleMessage(
+            "Password reset email sent successfully."),
+        "sendPassword": MessageLookupByLibrary.simpleMessage("Send"),
         "setting": MessageLookupByLibrary.simpleMessage("Settings"),
         "signUp": MessageLookupByLibrary.simpleMessage(
             "Are you sure you want to sign up ?"),

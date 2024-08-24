@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import '../../../../../core/caching/hive/my_box.dart';
+import '../../../../../core/utils/constant.dart';
 import '../../../../../core/utils/methods.dart';
 import '../../../../../generated/l10n.dart';
 import '../../manger/auth_cubit.dart';
@@ -37,6 +38,7 @@ class CustomButtonSignInBlocConsumer extends StatelessWidget {
         return CustomButton(
           text: S.of(context).login,
           isLoading: state is SignInLoading,
+          color: defaultColor,
           onPressed: () {
             if (formKey.currentState!.validate()) {
               BlocProvider.of<AuthCubit>(context).login(

@@ -1,6 +1,8 @@
 
 import 'package:flutter/material.dart';
 
+import '../utils/constant.dart';
+
 
 abstract class AppStyles {
 
@@ -37,6 +39,13 @@ abstract class AppStyles {
       fontSize: getResponsiveFontSize(context, fontSize: 20),
       fontWeight: FontWeight.w500,
       color: Colors.white
+    );
+  }
+  static TextStyle styleMedium24White(BuildContext context) {
+    return TextStyle(
+        fontSize: getResponsiveFontSize(context, fontSize: 24),
+        fontWeight: FontWeight.w500,
+        color: Colors.white
     );
   }
 
@@ -101,6 +110,20 @@ abstract class AppStyles {
     return TextStyle(
       fontSize: getResponsiveFontSize(context, fontSize: 18),
       fontWeight: FontWeight.w600,
+    );
+  }
+  static TextStyle styleBold32(BuildContext context) {
+    return TextStyle(
+      fontSize: getResponsiveFontSize(context, fontSize: 18),
+      fontWeight: FontWeight.bold,
+      color: defaultColor,
+    );
+  }
+  static TextStyle styleSemiBold20White(BuildContext context) {
+    return TextStyle(
+      fontSize: getResponsiveFontSize(context, fontSize: 20),
+      fontWeight: FontWeight.w600,
+      color: Colors.white
     );
   }
 }

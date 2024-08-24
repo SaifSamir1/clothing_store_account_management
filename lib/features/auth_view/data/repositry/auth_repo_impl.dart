@@ -2,7 +2,9 @@ import 'package:account_mangment_responsive/core/utils/constant.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:dartz/dartz.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/cupertino.dart';
 
+import '../../../../generated/l10n.dart';
 import '../models/user_model.dart';
 import 'auth_repo.dart';
 
@@ -67,10 +69,10 @@ class AuthRepoImpl extends AuthRepo {
 
   @override
   Future<Either<Exception, String>> resetPasswordAndSendItToMyEmail(
-      String email) async {
+      String email,context) async {
     try {
       await FirebaseAuth.instance.sendPasswordResetEmail(email: email);
-      return const Right('Check your email now');
+      return Right(S.of(context).checkYourEmail);
     } on FirebaseAuthException catch (e) {
       return Left(Exception(e.toString()));
     }
@@ -101,4 +103,6 @@ class AuthRepoImpl extends AuthRepo {
       return Left(Exception(e.toString()));
     }
   }
+
+
 }

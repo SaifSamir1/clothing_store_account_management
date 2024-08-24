@@ -1,3 +1,4 @@
+import 'package:account_mangment_responsive/core/extentions/regular_exepretion.dart';
 import 'package:account_mangment_responsive/features/auth_view/presentaion/manger/auth_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -33,8 +34,11 @@ class _SignInTextFieldsState extends State<SignInTextFields> {
             controller: widget.emailController,
             keyBoardType: TextInputType.emailAddress,
             valedate: (value) {
-              if (value!.isEmpty) {
+              if (value == null|| value.isEmpty) {
                 return S.of(context).loginEmailVal;
+              }
+              if(!value.emailValid){
+                return S.of(context).emailValidate;
               }
               return null;
             },

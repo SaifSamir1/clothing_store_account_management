@@ -12,7 +12,8 @@ class AuthCubit extends Cubit<AuthState> {
   AuthCubit(this.authRepo) : super(AuthInitial());
 
   AuthRepo authRepo;
-
+  final emailConfirm = TextEditingController();
+  final formKeyConfirm = GlobalKey<FormState>();
   bool isPasswordShow = true;
   IconData suffix = Icons.visibility_outlined;
   String? selectedName;
@@ -74,6 +75,19 @@ class AuthCubit extends Cubit<AuthState> {
       emit(StoreCountryError(errorMessage: error.toString()));
     }, (successMessage) {
       emit(StoreCountrySuccess());
+    });
+  }
+
+  Future<void> resetPasswordAndSendItToMyEmail({
+    required String email,
+    required BuildContext context,
+  }) async {
+    emit(ResetPasswordAndSendItToMyEmailLoadingState());
+    var result = await authRepo.resetPasswordAndSendItToMyEmail(email, context);
+    result.fold((error) {
+      emit(ResetPasswordAndSendItToMyEmailErrorState(error.toString()));
+    }, (credential) {
+      emit(ResetPasswordAndSendItToMyEmailSuccessState());
     });
   }
 }

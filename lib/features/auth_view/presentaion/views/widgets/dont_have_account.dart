@@ -19,7 +19,7 @@ class DoNotHaveAccount extends StatelessWidget {
           children: [
             Text(
               S.of(context).donthaveAccount,
-              style: AppStyles.styleSemiBold14(context),
+              style: AppStyles.styleSemiBold16(context),
             ),
             TextButton(
               onPressed: ()
@@ -28,7 +28,7 @@ class DoNotHaveAccount extends StatelessWidget {
               },
               child: Text(
                 S.of(context).signup,
-                style: AppStyles.styleSemiBold14(context).copyWith(
+                style: AppStyles.styleSemiBold16(context).copyWith(
                   color: defaultColor,
                 ),
               ),

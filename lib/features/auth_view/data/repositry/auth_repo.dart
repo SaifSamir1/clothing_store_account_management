@@ -16,6 +16,6 @@ abstract class AuthRepo
   Future<Either<Exception,String>> storeTheUserInformation({required UserInfoModel infoOfTheUser});
   Future<Either<Exception,String>> storeTheCountryName();
 
-  Future<Either<Exception,String>> resetPasswordAndSendItToMyEmail(String email);
+  Future<Either<Exception,String>> resetPasswordAndSendItToMyEmail(String email,context);
 
 }

@@ -729,6 +729,86 @@ class S {
       args: [],
     );
   }
+
+  /// `Please enter valid email address`
+  String get emailValidate {
+    return Intl.message(
+      'Please enter valid email address',
+      name: 'emailValidate',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Check your email now`
+  String get checkYourEmail {
+    return Intl.message(
+      'Check your email now',
+      name: 'checkYourEmail',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Forget password`
+  String get forgetPassword {
+    return Intl.message(
+      'Forget password',
+      name: 'forgetPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Reset Your Password`
+  String get resetPassword {
+    return Intl.message(
+      'Reset Your Password',
+      name: 'resetPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter your email address below. We will send you an email with instructions to reset your password.`
+  String get passwordResetDetails {
+    return Intl.message(
+      'Enter your email address below. We will send you an email with instructions to reset your password.',
+      name: 'passwordResetDetails',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Password reset email sent successfully.`
+  String get sendNewPasswordSuccess {
+    return Intl.message(
+      'Password reset email sent successfully.',
+      name: 'sendNewPasswordSuccess',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Send`
+  String get sendPassword {
+    return Intl.message(
+      'Send',
+      name: 'sendPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Back to Login`
+  String get backToLogin {
+    return Intl.message(
+      'Back to Login',
+      name: 'backToLogin',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

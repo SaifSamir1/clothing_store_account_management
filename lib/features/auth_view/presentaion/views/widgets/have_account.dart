@@ -20,15 +20,15 @@ class HaveAccount extends StatelessWidget {
           children: [
             Text(
               S.of(context).haveAccount,
-              style: AppStyles.styleSemiBold14(context),
+              style: AppStyles.styleSemiBold16(context),
             ),
             TextButton(
               onPressed: () {
-                GoRouter.of(context).push(Routes.signIn);
+                GoRouter.of(context).pushReplacement(Routes.signIn);
               },
               child: Text(
                 S.of(context).login,
-                style: AppStyles.styleSemiBold14(context).copyWith(
+                style: AppStyles.styleSemiBold16(context).copyWith(
                   color: defaultColor,
                 ),
               ),

@@ -1,3 +1,4 @@
+import 'package:account_mangment_responsive/core/extentions/regular_exepretion.dart';
 import 'package:account_mangment_responsive/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -31,12 +32,12 @@ class _SignUpTextFieldsState extends State<SignUpTextFields> {
       child: Column(
         children: [
           CustomTextFormField(
-            hintText: S.of(context).loginEmail,
-            controller: widget.emailController,
-            keyBoardType: TextInputType.emailAddress,
+            hintText: S.of(context).fullname,
+            controller: widget.nameController,
+            keyBoardType: TextInputType.name,
             valedate: (value) {
               if (value!.isEmpty) {
-                return S.of(context).loginEmailVal;
+                return S.of(context).nameRe;
               }
               return null;
             },
@@ -45,12 +46,15 @@ class _SignUpTextFieldsState extends State<SignUpTextFields> {
             height: 15,
           ),
           CustomTextFormField(
-            hintText: S.of(context).fullname,
-            controller: widget.nameController,
-            keyBoardType: TextInputType.name,
+            hintText: S.of(context).loginEmail,
+            controller: widget.emailController,
+            keyBoardType: TextInputType.emailAddress,
             valedate: (value) {
-              if (value!.isEmpty) {
-                return S.of(context).nameRe;
+              if (value == null|| value.isEmpty) {
+                return S.of(context).loginEmailVal;
+              }
+              if(!value.emailValid){
+                return S.of(context).emailValidate;
               }
               return null;
             },
