@@ -1,5 +1,4 @@
 import 'package:account_mangment_responsive/core/routing/animation_route.dart';
-import 'package:account_mangment_responsive/features/auth_view/data/models/user_model.dart';
 import 'package:account_mangment_responsive/features/auth_view/presentaion/views/auth_screen_signup.dart';
 import 'package:account_mangment_responsive/features/auth_view/presentaion/views/country_name.dart';
 import 'package:account_mangment_responsive/features/home_view/presentation/views/account_total_mony_screen.dart';
@@ -12,6 +11,7 @@ import '../../features/add_and_edit_customer/presentation/views/edit_customere_v
 import '../../features/add_product_and_deduction/presentaion/views/add_product_view.dart';
 import '../../features/add_product_and_deduction/presentaion/views/deduction_product_view.dart';
 import '../../features/auth_view/presentaion/views/auth_screen_signin.dart';
+import '../../features/auth_view/presentaion/views/forget_password_screen.dart';
 import '../../features/customer_detailes/data/models/all_details_for_the_customer_model.dart';
 import '../../features/customer_detailes/data/models/all_new_details_for_the_customer.dart';
 import '../../features/customer_detailes/data/repositry/customer_details_repo_impl.dart';
@@ -106,6 +106,12 @@ abstract class AppRouter {
         path: Routes.settingScreen,
         pageBuilder: (context, state) {
           return fadeTransitionPage(const SettingsScreen());
+        },
+      ),
+      GoRoute(
+        path: Routes.forgetPasswordScreen,
+        pageBuilder: (context, state) {
+          return fadeTransitionPage(const ForgotPasswordScreen());
         },
       ),
     ],

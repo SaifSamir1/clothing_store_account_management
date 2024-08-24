@@ -42,6 +42,7 @@ class SignUpButtonBlockConsumer extends StatelessWidget {
       },
       builder: (context, state) {
         return CustomButton(
+          color: defaultColor,
           isLoading: state is SignUpLoading ||
               state is SignUpSuccess ||
               state is StoreCountryLoading,

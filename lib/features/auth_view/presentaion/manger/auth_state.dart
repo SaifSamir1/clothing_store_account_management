@@ -44,3 +44,11 @@ class StoreCountryError extends AuthState
 
   StoreCountryError({required this.errorMessage});
 }
+
+class ResetPasswordAndSendItToMyEmailErrorState extends AuthState{
+  final String errorMessage;
+
+  ResetPasswordAndSendItToMyEmailErrorState(this.errorMessage);
+}
+class ResetPasswordAndSendItToMyEmailSuccessState extends AuthState{}
+class ResetPasswordAndSendItToMyEmailLoadingState extends AuthState{}

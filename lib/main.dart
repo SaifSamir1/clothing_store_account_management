@@ -1,6 +1,5 @@
 import 'package:account_mangment_responsive/core/utils/pdf_service.dart';
 import 'package:bloc/bloc.dart';
-import 'package:device_preview/device_preview.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
@@ -25,10 +24,7 @@ void main() async {
   showAuthScreen();
   userId = FirebaseAuth.instance.currentUser?.uid ?? '';
   runApp(
-    DevicePreview(
-      enabled: true,
-      builder: (context) => const MyApp(), // Wrap your app
-    ),
+    const MyApp(),
   );
 
 }

@@ -64,10 +64,14 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("مقدار الخصم"),
         "Thebeginmoney": MessageLookupByLibrary.simpleMessage("المبلغ المبدئي"),
         "addCustomer": MessageLookupByLibrary.simpleMessage("إضافة عميل"),
+        "backToLogin":
+            MessageLookupByLibrary.simpleMessage("العودة إلى تسجيل الدخول"),
         "byWho": MessageLookupByLibrary.simpleMessage("بيد من"),
         "cansle": MessageLookupByLibrary.simpleMessage("إلغاء"),
         "changeLang": MessageLookupByLibrary.simpleMessage("تغير اللغه"),
         "changeTheDay": MessageLookupByLibrary.simpleMessage("تغيير اليوم"),
+        "checkYourEmail": MessageLookupByLibrary.simpleMessage(
+            "تفقد البريد الالكتروني الخاص بك الان"),
         "customersNames": MessageLookupByLibrary.simpleMessage("أسماء العملاء"),
         "deductionmustnotbeempty": MessageLookupByLibrary.simpleMessage(
             "يجب ألا يكون مقدار الخصم فارغًا"),
@@ -76,6 +80,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "donthaveAccount":
             MessageLookupByLibrary.simpleMessage("ليس لديك حساب ؟ "),
         "edit": MessageLookupByLibrary.simpleMessage("تعديل"),
+        "emailValidate": MessageLookupByLibrary.simpleMessage(
+            "برجاء ادخال بريد الكتروني صحيح"),
+        "forgetPassword":
+            MessageLookupByLibrary.simpleMessage("نسيت كلمة السر"),
         "friday": MessageLookupByLibrary.simpleMessage("الجمعة"),
         "fullname": MessageLookupByLibrary.simpleMessage("الاسم الكامل"),
         "haveAccount":
@@ -100,11 +108,18 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("لا يوجد عملاء حتى الآن"),
         "noResult":
             MessageLookupByLibrary.simpleMessage("لم يتم العثور على نتائج"),
+        "passwordResetDetails": MessageLookupByLibrary.simpleMessage(
+            "أدخل عنوان بريدك الإلكتروني أدناه. سنرسل لك بريدًا إلكترونيًا يحتوي على تعليمات لإعادة تعيين كلمة المرور."),
         "pleaseSelectDay":
             MessageLookupByLibrary.simpleMessage("يرجى اختيار يوم"),
+        "resetPassword":
+            MessageLookupByLibrary.simpleMessage("إعادة تعيين كلمة المرور"),
         "saturday": MessageLookupByLibrary.simpleMessage("السبت"),
         "selTheday": MessageLookupByLibrary.simpleMessage("اختر اليوم"),
         "selectLang": MessageLookupByLibrary.simpleMessage("اختيار اللغه"),
+        "sendNewPasswordSuccess": MessageLookupByLibrary.simpleMessage(
+            "تم إرسال بريد إعادة تعيين كلمة المرور بنجاح."),
+        "sendPassword": MessageLookupByLibrary.simpleMessage("ارسال"),
         "setting": MessageLookupByLibrary.simpleMessage("الاعدادات"),
         "signUp": MessageLookupByLibrary.simpleMessage(
             "هل انت متاكد انك تريد تسجيل الخروج ؟"),

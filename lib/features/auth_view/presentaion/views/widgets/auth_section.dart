@@ -46,12 +46,14 @@ class _AuthSectionSignUpState extends State<AuthSectionSignUp> {
           emailController: emailController,
           passwordController: passwordController,
         ),
-        const HaveAccount(),
+        const SizedBox(height: 20,),
         SignUpButtonBlockConsumer(
             nameController: nameController,
             emailController: emailController,
             validateKey: validateKey,
-            passwordController: passwordController)
+            passwordController: passwordController),
+        const HaveAccount(),
+
       ],
     );
   }

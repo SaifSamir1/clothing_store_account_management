@@ -14,6 +14,7 @@ class CustomTextFormField extends StatelessWidget {
     this.suffixPressed,
     this.onFieldSubmitted,
     required this.valedate,
+    this.autoValidateMode = AutovalidateMode.onUserInteraction,
     this.onTap,
     this.obscureText,
   });
@@ -27,6 +28,7 @@ class CustomTextFormField extends StatelessWidget {
   final ValueChanged<String>? onFieldSubmitted;
   final FormFieldValidator<String> valedate;
   final bool? obscureText;
+  final AutovalidateMode autoValidateMode;
   final GestureTapCallback? onTap;
   final String hintText;
   @override
@@ -34,6 +36,7 @@ class CustomTextFormField extends StatelessWidget {
     return TextFormField(
       onChanged: onChange,
       controller: controller,
+      autovalidateMode: autoValidateMode,
       keyboardType: keyBoardType,
       onFieldSubmitted: onFieldSubmitted,
       validator: valedate,

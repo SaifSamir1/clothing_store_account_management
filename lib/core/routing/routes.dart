@@ -15,4 +15,5 @@ class Routes {
   static const String selectTheDay = '/kCountryNameView';
   static const String totalAmount = '/KTotalAmount';
   static const String settingScreen = '/KSettingScreen';
+  static const String forgetPasswordScreen = '/KForgetPasswordScreen';
 }

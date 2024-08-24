@@ -1,6 +1,8 @@
 
 import 'package:account_mangment_responsive/features/auth_view/presentaion/views/widgets/sign_in_text_fields.dart';
+import 'package:account_mangment_responsive/features/auth_view/presentaion/views/widgets/sign_up_header.dart';
 import 'package:flutter/material.dart';
+import '../../../../../generated/l10n.dart';
 import 'custom_button_signin_bloc_consumer.dart';
 import 'forget_bassword_button.dart';
 
@@ -28,9 +30,9 @@ class _AuthSectionSignInState extends State<AuthSectionSignIn> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        // const SignHeader(
-        //   header: 'Sign In',
-        // ),
+        SignHeader(
+          header: S.of(context).login,
+        ),
         const SizedBox(
           height: 20,
         ),
