@@ -136,7 +136,7 @@ double getResponsiveFontSize(context, {required double fontSize}) {
   double responsiveFontSize = fontSize * scaleFactor;
 
   double lowerLimit = fontSize * .8;
-  double upperLimit = fontSize * 1.2;
+  double upperLimit = fontSize * 1.8;
 
   return responsiveFontSize.clamp(lowerLimit, upperLimit);
 }
@@ -150,7 +150,7 @@ double getScaleFactor(context) {
 
   double width = MediaQuery.sizeOf(context).width;
   if (width < 800) {
-    return width / 500;
+    return width / 430;
   } else if (width < 1100) {
     return width / 950;
   } else {
