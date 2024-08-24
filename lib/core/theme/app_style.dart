@@ -32,6 +32,13 @@ abstract class AppStyles {
       fontWeight: FontWeight.w500,
     );
   }
+  static TextStyle styleMedium20White(BuildContext context) {
+    return TextStyle(
+      fontSize: getResponsiveFontSize(context, fontSize: 20),
+      fontWeight: FontWeight.w500,
+      color: Colors.white
+    );
+  }
 
   static TextStyle styleSemiBold16(BuildContext context) {
     return TextStyle(
@@ -72,6 +79,13 @@ abstract class AppStyles {
         fontSize: getResponsiveFontSize(context, fontSize: 24),
       fontWeight: FontWeight.w600,
 
+    );
+  }
+  static TextStyle styleSemiBold28(BuildContext context) {
+    return TextStyle(
+      fontSize: getResponsiveFontSize(context, fontSize: 28),
+      fontWeight: FontWeight.w600,
+      color: Colors.white
     );
   }
 

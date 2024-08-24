@@ -62,7 +62,9 @@
     "byWho" : "by Who",
     "Theamountofthededuction" : "The amount of the deduction",
     "deductionmustnotbeempty" : "the amount of the deduction must not be empty",
-    "deductionsuccessfully" : "The deduction was successful"
-
-
+    "deductionsuccessfully" : "The deduction was successful",
+    "setting" : "Settings",
+    "changeLang" : "Change Language",
+    "selectLang" : "Select Language",
+    "signUp" : "Are you sure you want to sign up ?"
 }   

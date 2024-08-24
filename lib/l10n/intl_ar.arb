@@ -61,5 +61,9 @@
   "byWho": "بيد من",
   "Theamountofthededuction": "مقدار الخصم",
   "deductionmustnotbeempty": "يجب ألا يكون مقدار الخصم فارغًا",
-  "deductionsuccessfully": "تم الخصم بنجاح"
+  "deductionsuccessfully": "تم الخصم بنجاح",
+  "setting" : "الاعدادات",
+  "changeLang" : "تغير اللغه",
+  "selectLang" : "اختيار اللغه",
+  "signUp" : "هل انت متاكد انك تريد تسجيل الخروج ؟"
 }

@@ -8,11 +8,11 @@ class AddCustomerView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     GlobalKey<ScaffoldState> scaffoldKey = GlobalKey();
-    return Scaffold(
-      key: scaffoldKey,
-      backgroundColor: const Color(0xffFFFFFF),
-      body: const SafeArea(
-        child: AddCustomerViewBody(),
+    return SafeArea(
+      child: Scaffold(
+        key: scaffoldKey,
+        backgroundColor: const Color(0xffFFFFFF),
+        body: const AddCustomerViewBody(),
       ),
     );
   }

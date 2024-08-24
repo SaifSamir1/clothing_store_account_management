@@ -32,7 +32,7 @@ class SelectDayDropDownButton extends StatelessWidget {
               .toList(),
           onChanged: (String? value) {
             BlocProvider.of<AuthCubit>(context).changeDropdownButton(
-                dayShow: value, trueDay: selectedValue(value!));
+                dayShow: value, trueDay: _selectedValue(value!));
           },
           value: BlocProvider.of<AuthCubit>(context).selectedName,
         );
@@ -40,7 +40,7 @@ class SelectDayDropDownButton extends StatelessWidget {
     );
   }
 
-  String selectedValue(String value) {
+  String _selectedValue(String value) {
     late String trueValue;
     switch (value) {
       case "Saturday":

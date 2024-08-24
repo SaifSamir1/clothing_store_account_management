@@ -68,6 +68,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "addCustomer": MessageLookupByLibrary.simpleMessage("Add Customer"),
         "byWho": MessageLookupByLibrary.simpleMessage("by Who"),
         "cansle": MessageLookupByLibrary.simpleMessage("Cancel"),
+        "changeLang": MessageLookupByLibrary.simpleMessage("Change Language"),
         "changeTheDay": MessageLookupByLibrary.simpleMessage("Change the day"),
         "customersNames":
             MessageLookupByLibrary.simpleMessage("Customers\'s Names"),
@@ -101,6 +102,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Please select a day"),
         "saturday": MessageLookupByLibrary.simpleMessage("Saturday"),
         "selTheday": MessageLookupByLibrary.simpleMessage("Sleect the Day"),
+        "selectLang": MessageLookupByLibrary.simpleMessage("Select Language"),
+        "setting": MessageLookupByLibrary.simpleMessage("Settings"),
+        "signUp": MessageLookupByLibrary.simpleMessage(
+            "Are you sure you want to sign up ?"),
         "signup": MessageLookupByLibrary.simpleMessage("Sign up"),
         "signupSuccess": MessageLookupByLibrary.simpleMessage(
             "The Account is created successfully"),

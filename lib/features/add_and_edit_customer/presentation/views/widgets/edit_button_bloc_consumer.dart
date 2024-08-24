@@ -47,6 +47,7 @@ class EditButtonBlocConsumer extends StatelessWidget {
           onPressed: () {
             _showCustomDialog(context, state, () {
               positiveActionButton(context);
+              GoRouter.of(context).pop();
             });
           },
           minWidth: 80,

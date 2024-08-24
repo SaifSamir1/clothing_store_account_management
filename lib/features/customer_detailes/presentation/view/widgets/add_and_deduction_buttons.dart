@@ -11,7 +11,7 @@ import '../../../data/models/all_details_for_the_customer_model.dart';
 import '../../../data/models/all_new_details_for_the_customer.dart';
 import '../../manger/customer_details_cubit.dart';
 
-class AddAndDeductionButtons extends StatefulWidget {
+class AddAndDeductionButtons extends StatelessWidget {
   const AddAndDeductionButtons({
     super.key,
     required this.allDetailsForTheCustomerModel,
@@ -20,37 +20,27 @@ class AddAndDeductionButtons extends StatefulWidget {
   final AllDetailsForTheCustomerModel allDetailsForTheCustomerModel;
 
   @override
-  State<AddAndDeductionButtons> createState() => _AddAndDeductionButtonsState();
-}
-
-class _AddAndDeductionButtonsState extends State<AddAndDeductionButtons> {
-  @override
-  void initState() {
-    super.initState();
-    BlocProvider.of<CustomerDetailsCubit>(context).getCustomerInfo(
-        customerId: widget.allDetailsForTheCustomerModel.customerId);
-  }
-
-  @override
   Widget build(BuildContext context) {
     return Row(
       mainAxisSize: MainAxisSize.max,
       mainAxisAlignment: MainAxisAlignment.end,
       children: [
         CustomButton(
-          color: defaultColor,
+            color: defaultColor,
             text: S.of(context).AddProduct,
             onPressed: () {
-              AllNewDetailsForTheCustomerModel
-                  allNewDetailsForTheCustomerModel =
-                  AllNewDetailsForTheCustomerModel(
-                      allDetailsForTheCustomerModel:
-                          widget.allDetailsForTheCustomerModel,
-                      newMoney: BlocProvider.of<CustomerDetailsCubit>(context)
-                          .customerInfo
-                          .money!);
-              GoRouter.of(context).push(Routes.addProductView,
-                  extra: allNewDetailsForTheCustomerModel);
+              if (context.read<CustomerDetailsCubit>().customerInfo != null) {
+                AllNewDetailsForTheCustomerModel
+                    allNewDetailsForTheCustomerModel =
+                    AllNewDetailsForTheCustomerModel(
+                        allDetailsForTheCustomerModel:
+                            allDetailsForTheCustomerModel,
+                        newMoney: BlocProvider.of<CustomerDetailsCubit>(context)
+                            .customerInfo!
+                            .money!);
+                GoRouter.of(context).push(Routes.addProductView,
+                    extra: allNewDetailsForTheCustomerModel);
+              }
             },
             minWidth: 100),
         Padding(
@@ -60,17 +50,20 @@ class _AddAndDeductionButtonsState extends State<AddAndDeductionButtons> {
                   color: defaultColor,
                   text: S.of(context).Deduction,
                   onPressed: () {
-                    AllNewDetailsForTheCustomerModel
-                        allNewDetailsForTheCustomerModel =
-                        AllNewDetailsForTheCustomerModel(
-                            allDetailsForTheCustomerModel:
-                                widget.allDetailsForTheCustomerModel,
-                            newMoney:
-                                BlocProvider.of<CustomerDetailsCubit>(context)
-                                    .customerInfo
-                                    .money!);
-                    GoRouter.of(context).push(Routes.deductionView,
-                        extra: allNewDetailsForTheCustomerModel);
+                    if (context.read<CustomerDetailsCubit>().customerInfo !=
+                        null) {
+                      AllNewDetailsForTheCustomerModel
+                          allNewDetailsForTheCustomerModel =
+                          AllNewDetailsForTheCustomerModel(
+                              allDetailsForTheCustomerModel:
+                                  allDetailsForTheCustomerModel,
+                              newMoney:
+                                  BlocProvider.of<CustomerDetailsCubit>(context)
+                                      .customerInfo!
+                                      .money!);
+                      GoRouter.of(context).push(Routes.deductionView,
+                          extra: allNewDetailsForTheCustomerModel);
+                    }
                   },
                   minWidth: 100)),
         ),

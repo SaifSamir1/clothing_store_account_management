@@ -1,7 +1,7 @@
 import 'package:pdf/pdf.dart';
 import 'package:pdf/widgets.dart';
 
-import '../../../../../../core/utils/hive_service.dart';
+import '../../../../../../core/caching/hive/my_box.dart';
 
 Widget buildAllCustomerHeader() {
   return Column(

@@ -6,8 +6,8 @@ import '../../../../auth_view/presentaion/views/widgets/custom_auth_button.dart'
 import '../../../../customer_detailes/data/models/all_new_details_for_the_customer.dart';
 import 'deduction_button_bloc_consumer.dart';
 
-class DeductionButtonsMobileLayout extends StatelessWidget {
-  const DeductionButtonsMobileLayout(
+class DeductionButtons extends StatelessWidget {
+  const DeductionButtons(
       {super.key,
       required this.formKey,
       required this.byWhoController,
@@ -24,7 +24,9 @@ class DeductionButtonsMobileLayout extends StatelessWidget {
     return Row(
       children: [
         CustomButton(
-          textStyle: AppStyles.styleMedium16(context),
+          textStyle: AppStyles.styleMedium16(context).copyWith(
+            color: Colors.white
+          ),
           text: S.of(context).cansle,
           onPressed: () {
             GoRouter.of(context).pop();

@@ -23,3 +23,4 @@ Future<Box> openHiveBox(String boxName) async
   return await Hive.openBox(boxName);
 
 }
+

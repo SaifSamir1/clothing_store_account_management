@@ -679,6 +679,46 @@ class S {
       args: [],
     );
   }
+
+  /// `Settings`
+  String get setting {
+    return Intl.message(
+      'Settings',
+      name: 'setting',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Change Language`
+  String get changeLang {
+    return Intl.message(
+      'Change Language',
+      name: 'changeLang',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Select Language`
+  String get selectLang {
+    return Intl.message(
+      'Select Language',
+      name: 'selectLang',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Are you sure you want to sign up ?`
+  String get signUp {
+    return Intl.message(
+      'Are you sure you want to sign up ?',
+      name: 'signUp',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

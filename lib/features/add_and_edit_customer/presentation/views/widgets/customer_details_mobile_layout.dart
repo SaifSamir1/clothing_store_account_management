@@ -53,6 +53,9 @@ class _CustomerDetailsMobilLayoutState
               const SizedBox(
                 height: 30,
               ),
+              const SizedBox(
+                height: 30,
+              ),
               BlocConsumer<AddCustomerCubit, AddCustomerState>(
                 listener: (context, state) {
                   if (state is AddCustomerSuccess) {

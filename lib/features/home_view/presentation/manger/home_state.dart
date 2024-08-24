@@ -34,3 +34,6 @@ class GetUserInfoError extends HomeState {
 
   GetUserInfoError({required this.errorMessage});
 }
+
+class SignOutLoading extends HomeState {}
+class SignOutSuccess extends HomeState {}

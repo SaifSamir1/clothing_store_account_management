@@ -17,7 +17,7 @@ class CustomerDetailsListView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider.of<CustomerDetailsCubit>(context)
-            .customerProductDetails
+            .customerProductDetails!
             .docs
             .isEmpty
         ? TheListIsEmpty(
@@ -26,7 +26,7 @@ class CustomerDetailsListView extends StatelessWidget {
         : ListView.builder(
             padding: const EdgeInsets.only(bottom: 10),
             itemCount: BlocProvider.of<CustomerDetailsCubit>(context)
-                .customerProductDetails
+                .customerProductDetails!
                 .docs
                 .length,
             itemBuilder: (BuildContext context, int index) {
@@ -34,11 +34,11 @@ class CustomerDetailsListView extends StatelessWidget {
                 aspectRatio: 4.5,
                 child: DetailsItem(
                   allProducts: BlocProvider.of<CustomerDetailsCubit>(context)
-                      .customerProductDetails
+                      .customerProductDetails!
                       .docs,
                   productsAndDeductionDetails:
                       BlocProvider.of<CustomerDetailsCubit>(context)
-                          .customerProductDetails
+                          .customerProductDetails!
                           .productsAndDeductionDetails,
                   index: index,
                   allDetailsForTheCustomerModel: allDetailsForTheCustomerModel,

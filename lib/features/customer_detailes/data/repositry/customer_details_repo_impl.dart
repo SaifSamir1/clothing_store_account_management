@@ -5,7 +5,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:dartz/dartz.dart';
 
 import '../../../../core/utils/constant.dart';
-import '../../../../core/utils/hive_service.dart';
+import '../../../../core/caching/hive/my_box.dart';
 
 class CustomerDetailsRepoImpl extends CustomerDetailsRepo {
   @override

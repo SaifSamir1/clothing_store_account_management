@@ -15,6 +15,7 @@ class CustomButton extends StatelessWidget {
     this.iconColor,
     this.buttonHeight,
     this.textStyle,
+    this.textColor,
   });
 
   final String text;
@@ -22,6 +23,7 @@ class CustomButton extends StatelessWidget {
   final double minWidth;
   final IconData? icon;
   final Color? color;
+  final Color? textColor;
   final Color? iconColor;
   final bool? isLoading;
   final TextStyle? textStyle;
@@ -29,7 +31,7 @@ class CustomButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialButton(
-      padding: const EdgeInsets.only(left: 15, right:15),
+      padding: const EdgeInsets.only(left: 15, right: 15),
       onPressed: onPressed,
       color: color ?? Colors.transparent,
       elevation: 0,
@@ -58,9 +60,10 @@ class CustomButton extends StatelessWidget {
                 ),
                 Text(text,
                     textAlign: TextAlign.center,
-                    style:textStyle ?? AppStyles.styleSemiBold14(context).copyWith(
-                      color: iconColor ?? Colors.white,
-                    )),
+                    style: textStyle ??
+                        AppStyles.styleSemiBold14(context).copyWith(
+                          color: textColor ?? Colors.white,
+                        )),
               ],
             ),
     );

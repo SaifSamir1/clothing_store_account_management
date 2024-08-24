@@ -55,9 +55,11 @@ class _DeductionButtonBlocConsumerState
       },
       builder: (context, state) {
         return CustomButton(
-          textStyle: AppStyles.styleMedium16(context),
+          textStyle: AppStyles.styleMedium16(context).copyWith(
+            color: Colors.white
+          ),
           color: defaultColor,
-          text: S.of(context).Add,
+          text: S.of(context).Deduction,
           onPressed: () {
             sumAndDeduction =
                 sumAndDeduction + int.parse(widget.deductionController.text);

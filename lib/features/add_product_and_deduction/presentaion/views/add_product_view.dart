@@ -11,11 +11,11 @@ class AddProductView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     GlobalKey<ScaffoldState> scaffoldKey = GlobalKey();
-    return Scaffold(
-      key: scaffoldKey,
-      backgroundColor: const Color(0xffFFFFFF),
-      body: SafeArea(
-        child: AddProductViewBody(
+    return SafeArea(
+      child: Scaffold(
+        key: scaffoldKey,
+        backgroundColor: const Color(0xffFFFFFF),
+        body: AddProductViewBody(
           allDetailsForTheCustomerModel: allDetailsForTheCustomerModel,
         ),
       ),
