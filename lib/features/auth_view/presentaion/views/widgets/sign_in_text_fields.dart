@@ -30,6 +30,7 @@ class _SignInTextFieldsState extends State<SignInTextFields> {
       child: Column(
         children: [
           CustomTextFormField(
+            autoValidate: true,
             hintText: S.of(context).loginEmail,
             controller: widget.emailController,
             keyBoardType: TextInputType.emailAddress,
@@ -49,6 +50,7 @@ class _SignInTextFieldsState extends State<SignInTextFields> {
           BlocBuilder<AuthCubit, AuthState>(
             builder: (context, state) {
               return CustomTextFormField(
+                autoValidate: true,
                 hintText: S.of(context).loginPass,
                 controller: widget.passwordController,
                 keyBoardType: TextInputType.visiblePassword,

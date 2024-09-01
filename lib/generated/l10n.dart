@@ -809,6 +809,76 @@ class S {
       args: [],
     );
   }
+
+  /// `No Paid`
+  String get noPaid {
+    return Intl.message(
+      'No Paid',
+      name: 'noPaid',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Paid by`
+  String get paidBy {
+    return Intl.message(
+      'Paid by',
+      name: 'paidBy',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Customer Details`
+  String get customerDetails {
+    return Intl.message(
+      'Customer Details',
+      name: 'customerDetails',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Number`
+  String get number {
+    return Intl.message(
+      'Number',
+      name: 'number',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Customer Name`
+  String get customername {
+    return Intl.message(
+      'Customer Name',
+      name: 'customername',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The money`
+  String get Themoney {
+    return Intl.message(
+      'The money',
+      name: 'Themoney',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Date`
+  String get date {
+    return Intl.message(
+      'Date',
+      name: 'date',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

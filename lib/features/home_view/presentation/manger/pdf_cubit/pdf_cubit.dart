@@ -4,8 +4,9 @@ import 'dart:developer';
 import 'package:bloc/bloc.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:dartz/dartz.dart';
+import 'package:intl/intl.dart';
 import 'package:meta/meta.dart';
-
+import '../../../../../generated/l10n.dart';
 import '../../../data/reposetry/home_repo.dart';
 
 part 'pdf_state.dart';
@@ -17,21 +18,18 @@ class PdfCubit extends Cubit<PdfState> {
 
   List<dynamic> paidDate =[];
   Future<void> getCustomerLastPaidDate(
-      {required List<QueryDocumentSnapshot<Object?>> allCustomers}) async {
+      {required List<QueryDocumentSnapshot<Object?>> allCustomers,context}) async {
     emit(GetLastDateForCustomerPaidLoading());
     Either<Exception, DateTime> result;
     for(QueryDocumentSnapshot<Object?> element in allCustomers){
       result = await homeRepo.getCustomerLastPaidDate(customerId:element.id,);
       result.fold((error) {
-        paidDate.add('No Paid');
+        paidDate.add(S.of(context).noPaid);
       }, (lastDate) {
-        paidDate.add(lastDate);
+        String formattedDate = DateFormat('yyyy-MM-dd').format(lastDate);
+        paidDate.add(formattedDate);
       });
     }
-    for(var e in paidDate)
-      {
-        log(e.toString() );
-      }
     emit(GetLastDateForCustomerPaidSuccess(getLastDateForCustomerPaid: paidDate));
   }
 }
