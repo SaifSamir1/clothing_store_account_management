@@ -63,6 +63,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "Theamountofthededuction":
             MessageLookupByLibrary.simpleMessage("مقدار الخصم"),
         "Thebeginmoney": MessageLookupByLibrary.simpleMessage("المبلغ المبدئي"),
+        "Themoney": MessageLookupByLibrary.simpleMessage("الحساب"),
         "addCustomer": MessageLookupByLibrary.simpleMessage("إضافة عميل"),
         "backToLogin":
             MessageLookupByLibrary.simpleMessage("العودة إلى تسجيل الدخول"),
@@ -72,7 +73,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "changeTheDay": MessageLookupByLibrary.simpleMessage("تغيير اليوم"),
         "checkYourEmail": MessageLookupByLibrary.simpleMessage(
             "تفقد البريد الالكتروني الخاص بك الان"),
+        "customerDetails":
+            MessageLookupByLibrary.simpleMessage("تفاصيل الزبائن"),
+        "customername": MessageLookupByLibrary.simpleMessage("اسم الزبون"),
         "customersNames": MessageLookupByLibrary.simpleMessage("أسماء العملاء"),
+        "date": MessageLookupByLibrary.simpleMessage("التاريخ"),
         "deductionmustnotbeempty": MessageLookupByLibrary.simpleMessage(
             "يجب ألا يكون مقدار الخصم فارغًا"),
         "deductionsuccessfully":
@@ -106,8 +111,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "nameRe": MessageLookupByLibrary.simpleMessage("الاسم مطلوب"),
         "noCustomersYet":
             MessageLookupByLibrary.simpleMessage("لا يوجد عملاء حتى الآن"),
+        "noPaid": MessageLookupByLibrary.simpleMessage("لا يوجد دفع"),
         "noResult":
             MessageLookupByLibrary.simpleMessage("لم يتم العثور على نتائج"),
+        "number": MessageLookupByLibrary.simpleMessage("الرقم"),
+        "paidBy": MessageLookupByLibrary.simpleMessage("دفع بيد"),
         "passwordResetDetails": MessageLookupByLibrary.simpleMessage(
             "أدخل عنوان بريدك الإلكتروني أدناه. سنرسل لك بريدًا إلكترونيًا يحتوي على تعليمات لإعادة تعيين كلمة المرور."),
         "pleaseSelectDay":

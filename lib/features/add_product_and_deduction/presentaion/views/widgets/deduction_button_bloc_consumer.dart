@@ -100,7 +100,7 @@ class _DeductionButtonBlocConsumerState
     AddProductAndDeductionModel productModel = AddProductAndDeductionModel(
         dateTime: DateTime.now(),
         money: widget.deductionController.text,
-        productNameOrByWho: 'Paid by ${widget.byWhoController.text}',
+        productNameOrByWho: '${S.of(context).paidBy} ${widget.byWhoController.text}',
         paidOrProduct: 'paid');
     BlocProvider.of<AddProductAndDeductionCubit>(context)
         .addProductAndDeduction(

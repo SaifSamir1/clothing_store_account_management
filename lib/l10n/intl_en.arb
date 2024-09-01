@@ -75,6 +75,13 @@
     "passwordResetDetails" : "Enter your email address below. We will send you an email with instructions to reset your password.",
     "sendNewPasswordSuccess": "Password reset email sent successfully.",
     "sendPassword" : "Send",
-    "backToLogin" : "Back to Login"
+    "backToLogin" : "Back to Login",
+    "noPaid" : "No Paid",
+    "paidBy" : "Paid by",
+    "customerDetails" : "Customer Details",
+    "number" : "Number",
+    "customername" : "Customer Name",
+    "Themoney" : "The money",
+    "date" : "Date"
 
 }   

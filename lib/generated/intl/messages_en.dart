@@ -65,6 +65,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("The amount of the deduction"),
         "Thebeginmoney":
             MessageLookupByLibrary.simpleMessage("The begin money "),
+        "Themoney": MessageLookupByLibrary.simpleMessage("The money"),
         "addCustomer": MessageLookupByLibrary.simpleMessage("Add Customer"),
         "backToLogin": MessageLookupByLibrary.simpleMessage("Back to Login"),
         "byWho": MessageLookupByLibrary.simpleMessage("by Who"),
@@ -73,8 +74,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "changeTheDay": MessageLookupByLibrary.simpleMessage("Change the day"),
         "checkYourEmail":
             MessageLookupByLibrary.simpleMessage("Check your email now"),
+        "customerDetails":
+            MessageLookupByLibrary.simpleMessage("Customer Details"),
+        "customername": MessageLookupByLibrary.simpleMessage("Customer Name"),
         "customersNames":
             MessageLookupByLibrary.simpleMessage("Customers\'s Names"),
+        "date": MessageLookupByLibrary.simpleMessage("Date"),
         "deductionmustnotbeempty": MessageLookupByLibrary.simpleMessage(
             "the amount of the deduction must not be empty"),
         "deductionsuccessfully": MessageLookupByLibrary.simpleMessage(
@@ -106,7 +111,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "nameRe": MessageLookupByLibrary.simpleMessage("name required"),
         "noCustomersYet":
             MessageLookupByLibrary.simpleMessage("No Customer Yet"),
+        "noPaid": MessageLookupByLibrary.simpleMessage("No Paid"),
         "noResult": MessageLookupByLibrary.simpleMessage("No Result Found"),
+        "number": MessageLookupByLibrary.simpleMessage("Number"),
+        "paidBy": MessageLookupByLibrary.simpleMessage("Paid by"),
         "passwordResetDetails": MessageLookupByLibrary.simpleMessage(
             "Enter your email address below. We will send you an email with instructions to reset your password."),
         "pleaseSelectDay":
