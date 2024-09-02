@@ -31,7 +31,8 @@ pw.Widget buildCustomerDetailsTable({
       index,
       pw.Text(
         customer.customerName!,
-        style: const pw.TextStyle(
+        style: pw.TextStyle(
+          font: customerIsArabic ? PdfService.arFont : PdfService.enFont,
         ),
         textDirection: customerIsArabic ? pw.TextDirection.rtl : pw.TextDirection.ltr,
         textAlign: customerIsArabic ? pw.TextAlign.right : pw.TextAlign.left,
@@ -49,11 +50,5 @@ pw.Widget buildCustomerDetailsTable({
       fontWeight: pw.FontWeight.bold,font: isArabic ? PdfService.arFont : PdfService.enFont,),
     headerDecoration: const pw.BoxDecoration(color: PdfColors.grey300),
     cellHeight: 30,
-    cellAlignments: {
-      0: pw.Alignment.centerLeft,
-      1: pw.Alignment.centerLeft,
-      2: pw.Alignment.centerLeft,
-      3: pw.Alignment.centerLeft,
-    },
   );
 }
