@@ -31,9 +31,10 @@ pw.Widget buildCustomerDetailsTable({
       index,
       pw.Text(
         customer.customerName!,
-        style: pw.TextStyle(
-          font: customerIsArabic ? PdfService.arFont : PdfService.enFont,
+        style: const pw.TextStyle(
         ),
+        textDirection: customerIsArabic ? pw.TextDirection.rtl : pw.TextDirection.ltr,
+        textAlign: customerIsArabic ? pw.TextAlign.right : pw.TextAlign.left,
       ),
       customer.money,
       lastPaidDate[index - 1],

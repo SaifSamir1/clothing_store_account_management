@@ -1,5 +1,6 @@
 import 'package:account_mangment_responsive/core/utils/pdf_service.dart';
 import 'package:bloc/bloc.dart';
+import 'package:device_preview/device_preview.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
@@ -24,9 +25,11 @@ void main() async {
   showAuthScreen();
   userId = FirebaseAuth.instance.currentUser?.uid ?? '';
   runApp(
-    const MyApp(),
+    DevicePreview(
+      enabled: true,
+      builder: (BuildContext context) => const MyApp(),
+    ),
   );
-
 }
 
 Future<FirebaseApp> firebaseInitialization() {
@@ -40,13 +43,10 @@ Future<FirebaseApp> firebaseInitialization() {
 }
 
 void showAuthScreen() {
-  if (myBox!.get("notShowAuthScreen") == "true"){
+  if (myBox!.get("notShowAuthScreen") == "true") {
     myBox!.put("notShowAuthScreen", "true");
   } else {
     myBox!.put("notShowAuthScreen", "false");
   }
 }
 
-void localizationSetup(){
-
-}
