@@ -82,6 +82,8 @@
     "number" : "Number",
     "customername" : "Customer Name",
     "Themoney" : "The money",
-    "date" : "Date"
+    "date" : "Date",
+    "theType" : "Type",
+    "thePrice" : "The price"
 
 }   

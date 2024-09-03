@@ -7,6 +7,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:meta/meta.dart';
 
+import '../../../../core/caching/hive/my_box.dart';
 import '../../data/models/customer_model.dart';
 
 part 'home_state.dart';
@@ -79,6 +80,7 @@ class HomeCubit extends Cubit<HomeState> {
   {
     emit(SignOutLoading());
     await FirebaseAuth.instance.signOut().then((value){
+      myBox!.put("notShowAuthScreen", "false");
       emit(SignOutSuccess());
     });
   }

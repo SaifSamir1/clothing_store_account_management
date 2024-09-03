@@ -81,6 +81,7 @@
   "number" : "الرقم",
   "customername" : "اسم الزبون",
   "Themoney" : "الحساب",
-  "date" : "التاريخ"
-
+  "date" : "التاريخ" ,
+  "theType" : "النوع",
+  "thePrice" : "السعر"
 }

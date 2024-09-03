@@ -136,6 +136,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "sunday": MessageLookupByLibrary.simpleMessage("Sunday"),
         "sureness": MessageLookupByLibrary.simpleMessage(
             "Are you sure you want to change the day?"),
+        "thePrice": MessageLookupByLibrary.simpleMessage("The price"),
+        "theType": MessageLookupByLibrary.simpleMessage("Type"),
         "thursday": MessageLookupByLibrary.simpleMessage("Thursday"),
         "totalAccount": MessageLookupByLibrary.simpleMessage(
             "The total account of the day"),
