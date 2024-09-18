@@ -30,19 +30,16 @@ class CustomerDetailsListView extends StatelessWidget {
                 .docs
                 .length,
             itemBuilder: (BuildContext context, int index) {
-              return AspectRatio(
-                aspectRatio: 4.5,
-                child: DetailsItem(
-                  allProducts: BlocProvider.of<CustomerDetailsCubit>(context)
-                      .customerProductDetails!
-                      .docs,
-                  productsAndDeductionDetails:
-                      BlocProvider.of<CustomerDetailsCubit>(context)
-                          .customerProductDetails!
-                          .productsAndDeductionDetails,
-                  index: index,
-                  allDetailsForTheCustomerModel: allDetailsForTheCustomerModel,
-                ),
+              return DetailsItem(
+                allProducts: BlocProvider.of<CustomerDetailsCubit>(context)
+                    .customerProductDetails!
+                    .docs,
+                productsAndDeductionDetails:
+                    BlocProvider.of<CustomerDetailsCubit>(context)
+                        .customerProductDetails!
+                        .productsAndDeductionDetails,
+                index: index,
+                allDetailsForTheCustomerModel: allDetailsForTheCustomerModel,
               );
             },
           );

@@ -65,6 +65,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "Thebeginmoney": MessageLookupByLibrary.simpleMessage("المبلغ المبدئي"),
         "Themoney": MessageLookupByLibrary.simpleMessage("الحساب"),
         "addCustomer": MessageLookupByLibrary.simpleMessage("إضافة عميل"),
+        "amount": MessageLookupByLibrary.simpleMessage("الحساب الكلي"),
+        "back": MessageLookupByLibrary.simpleMessage("رجوع"),
         "backToLogin":
             MessageLookupByLibrary.simpleMessage("العودة إلى تسجيل الدخول"),
         "byWho": MessageLookupByLibrary.simpleMessage("بيد من"),

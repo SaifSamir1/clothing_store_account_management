@@ -2,7 +2,6 @@ import 'package:account_mangment_responsive/features/home_view/presentation/view
 import 'package:account_mangment_responsive/features/home_view/presentation/views/widgets/saerch_appbar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
 import '../../../../../core/cubits/language_cubit/language_cubit.dart';
 import '../../../../../core/utils/constant.dart';
 import '../../../../../core/caching/hive/my_box.dart';
@@ -60,6 +59,7 @@ List<Widget> buildAppBarActions(
             },
             icon: const Icon(
               Icons.search,
+              size:25,
               color: Colors.white,
             ),
           );

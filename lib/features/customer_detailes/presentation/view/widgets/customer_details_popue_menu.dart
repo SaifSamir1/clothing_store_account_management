@@ -56,7 +56,7 @@ class CustomerDetailsPopupMenu extends StatelessWidget {
     final pdfFile = await PdfService.generate(
       context: context,
       pagesContent: [
-        buildCustomerHeader(context,allDetailsForTheCustomerModel),
+        buildCustomerHeader(context),
         buildCustomerDetailTable(
           context: context,
         ),

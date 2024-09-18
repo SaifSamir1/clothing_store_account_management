@@ -67,6 +67,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("The begin money "),
         "Themoney": MessageLookupByLibrary.simpleMessage("The money"),
         "addCustomer": MessageLookupByLibrary.simpleMessage("Add Customer"),
+        "amount": MessageLookupByLibrary.simpleMessage("Amount"),
+        "back": MessageLookupByLibrary.simpleMessage("Back"),
         "backToLogin": MessageLookupByLibrary.simpleMessage("Back to Login"),
         "byWho": MessageLookupByLibrary.simpleMessage("by Who"),
         "cansle": MessageLookupByLibrary.simpleMessage("Cancel"),

@@ -1,18 +1,19 @@
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:pdf/pdf.dart';
 import 'package:pdf/widgets.dart';
 import '../../../../../../core/utils/pdf_service.dart';
 import '../../../../../../generated/l10n.dart';
-import '../../../../data/models/all_details_for_the_customer_model.dart';
+import '../../../manger/customer_details_cubit.dart';
 
-Widget buildCustomerHeader(context,AllDetailsForTheCustomerModel allDetailsForTheCustomerModel) {
+Widget buildCustomerHeader(context) {
   bool nameIsArabic =
-  allDetailsForTheCustomerModel.customerDetails.customerName!.contains(RegExp(r'[\u0600-\u06FF]'));
+  BlocProvider.of<CustomerDetailsCubit>(context).customerInfo!.customerName!.contains(RegExp(r'[\u0600-\u06FF]'));
   return Column(
     crossAxisAlignment: CrossAxisAlignment.start,
     children: [
       SizedBox(height: .5 * PdfPageFormat.cm),
       Text(
-        allDetailsForTheCustomerModel.customerDetails.customerName!,
+        BlocProvider.of<CustomerDetailsCubit>(context).customerInfo!.customerName!,
         textDirection: nameIsArabic
             ? TextDirection.rtl
             : TextDirection.ltr,
@@ -30,7 +31,7 @@ Widget buildCustomerHeader(context,AllDetailsForTheCustomerModel allDetailsForTh
           ),
           SizedBox(width: .5 * PdfPageFormat.cm),
           Text(
-            '${allDetailsForTheCustomerModel.customerDetails.money!}',
+            '${BlocProvider.of<CustomerDetailsCubit>(context).customerInfo!.money}',
             style:  const TextStyle(fontSize: 18),
           ),
         ]

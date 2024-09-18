@@ -84,6 +84,8 @@
     "Themoney" : "The money",
     "date" : "Date",
     "theType" : "Type",
-    "thePrice" : "The price"
+    "thePrice" : "The price",
+    "amount" : "Amount",
+    "back" : "Back"
 
 }   

@@ -26,7 +26,7 @@ void main() async {
   userId = FirebaseAuth.instance.currentUser?.uid ?? '';
   runApp(
     DevicePreview(
-      enabled: false,
+      enabled: true,
       builder: (BuildContext context) => const MyApp(),
     ),
   );
