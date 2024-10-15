@@ -13,7 +13,7 @@
         </intent>
     </queries>
     <application
-        android:label="account_mangment_responsive"
+        android:label="Clothing Account Manager"
         android:name="${applicationName}"
         android:usesCleartextTraffic="true"
         android:icon="@mipmap/ic_launcher">

@@ -39,10 +39,11 @@ class AuthCubit extends Cubit<AuthState> {
   Future<void> signUpAndSaveTheUserInformation({
     required UserInfoModel userInfoModel,
     required String password,
+    required context
   }) async {
     emit(SignUpLoading());
 
-    var result = await authRepo.signUp(userInfoModel.email!, password);
+    var result = await authRepo.signUp(userInfoModel.email!, password,context);
     result.fold((error) {
       emit(SignUpError(errorMessage: error.toString()));
     }, (credential) async {
@@ -56,9 +57,10 @@ class AuthCubit extends Cubit<AuthState> {
   Future<void> login({
     required String password,
     required String email,
+    required context
   }) async {
     emit(SignInLoading());
-    var result = await authRepo.login(email, password);
+    var result = await authRepo.login(email, password,context);
     result.fold((error) {
       emit(SignInError(errorMessage: error.toString()));
     }, (credential) async {

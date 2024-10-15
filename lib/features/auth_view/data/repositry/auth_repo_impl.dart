@@ -2,55 +2,49 @@ import 'package:account_mangment_responsive/core/utils/constant.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:dartz/dartz.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter/cupertino.dart';
 
+import '../../../../core/error/sign_in_error_handler.dart';
+import '../../../../core/error/sign_up_error_handeler.dart';
 import '../../../../generated/l10n.dart';
 import '../models/user_model.dart';
 import 'auth_repo.dart';
 
 class AuthRepoImpl extends AuthRepo {
+
+  final SignUpErrorHandler _signUpErrorHandler;
+  final SignInErrorHandler _signInErrorHandler;
+  AuthRepoImpl(this._signUpErrorHandler, this._signInErrorHandler);
   @override
-  Future<Either<Exception, UserCredential>> login(
-      String emailAddress, String password) async {
+  Future<Either<String, UserCredential>> login(
+      String emailAddress, String password,context) async {
     try {
       final credential = await FirebaseAuth.instance
           .signInWithEmailAndPassword(email: emailAddress, password: password);
       return Right(credential);
     } on FirebaseAuthException catch (e) {
-      if (e.code == 'user-not-found') {
-        return Left(Exception('No user found for that email.'));
-      } else if (e.code == 'wrong-password') {
-        return Left(Exception('Wrong password provided for that user.'));
-      } else {
-        return Left(Exception('خطا في كلمة السر او البريد الالكتروني'));
-      }
+      return Left(_signInErrorHandler.handleFirebaseAuthError(e,context));
     } catch (e) {
-      return Left(Exception(e.toString()));
+      return Left('An error occurred: ${e.toString()}');
     }
   }
 
   @override
-  Future<Either<Exception, UserCredential>> signUp(
-      String emailAddress, String password) async {
+  Future<Either<String, UserCredential>> signUp(
+      String emailAddress, String password,context) async {
     try {
-      final credential =
-          await FirebaseAuth.instance.createUserWithEmailAndPassword(
+      final credential = await FirebaseAuth.instance.createUserWithEmailAndPassword(
         email: emailAddress,
         password: password,
       );
       return Right(credential);
     } on FirebaseAuthException catch (e) {
-      if (e.code == 'weak-password') {
-        return Left(Exception('The password provided is too weak.'));
-      } else if (e.code == 'email-already-in-use') {
-        return Left(Exception('The account already exists for that email.'));
-      } else {
-        return Left(Exception('something wrong'));
-      }
+      return Left(_signUpErrorHandler.handleFirebaseAuthError(e,context));
     } catch (e) {
-      return Left(Exception(e.toString()));
+      return Left('An unexpected error occurred: ${e.toString()}');
     }
   }
+
+
 
   @override
   Future<Either<Exception, String>> storeTheUserInformation(
@@ -68,13 +62,15 @@ class AuthRepoImpl extends AuthRepo {
   }
 
   @override
-  Future<Either<Exception, String>> resetPasswordAndSendItToMyEmail(
+  Future<Either<String, String>> resetPasswordAndSendItToMyEmail(
       String email,context) async {
     try {
       await FirebaseAuth.instance.sendPasswordResetEmail(email: email);
       return Right(S.of(context).checkYourEmail);
     } on FirebaseAuthException catch (e) {
-      return Left(Exception(e.toString()));
+      return Left(_signInErrorHandler.handleFirebaseAuthError(e,context));
+    } catch (e) {
+      return Left(S.of(context).unknown_error(e.toString()));
     }
   }
 

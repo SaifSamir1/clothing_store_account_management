@@ -20,6 +20,8 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'en';
 
+  static String m0(message) => "An unknown error occurred: ${message}.";
+
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "Add": MessageLookupByLibrary.simpleMessage("Add"),
@@ -91,6 +93,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "edit": MessageLookupByLibrary.simpleMessage("Edit"),
         "emailValidate": MessageLookupByLibrary.simpleMessage(
             "Please enter valid email address"),
+        "email_already_in_use": MessageLookupByLibrary.simpleMessage(
+            "The account already exists for that email."),
         "forgetPassword":
             MessageLookupByLibrary.simpleMessage("Forget password"),
         "friday": MessageLookupByLibrary.simpleMessage("Friday"),
@@ -99,6 +103,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Already have an account?"),
         "internetError": MessageLookupByLibrary.simpleMessage(
             "some thing error,please check the internet connection"),
+        "invalid_credential": MessageLookupByLibrary.simpleMessage(
+            "The provided credential is invalid or expired."),
+        "invalid_email": MessageLookupByLibrary.simpleMessage(
+            "The email address is not valid."),
         "login": MessageLookupByLibrary.simpleMessage("Sign in"),
         "loginEmail": MessageLookupByLibrary.simpleMessage("Email address"),
         "loginEmailVal":
@@ -111,11 +119,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "loginSuccess": MessageLookupByLibrary.simpleMessage("Login success"),
         "monday": MessageLookupByLibrary.simpleMessage("Monday"),
         "nameRe": MessageLookupByLibrary.simpleMessage("name required"),
+        "network_request_failed": MessageLookupByLibrary.simpleMessage(
+            "A network error occurred. Please check your connection."),
         "noCustomersYet":
             MessageLookupByLibrary.simpleMessage("No Customer Yet"),
         "noPaid": MessageLookupByLibrary.simpleMessage("No Paid"),
         "noResult": MessageLookupByLibrary.simpleMessage("No Result Found"),
         "number": MessageLookupByLibrary.simpleMessage("Number"),
+        "operation_not_allowed": MessageLookupByLibrary.simpleMessage(
+            "Email/password accounts are not enabled."),
         "paidBy": MessageLookupByLibrary.simpleMessage("Paid by"),
         "passwordResetDetails": MessageLookupByLibrary.simpleMessage(
             "Enter your email address below. We will send you an email with instructions to reset your password."),
@@ -127,7 +139,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "selTheday": MessageLookupByLibrary.simpleMessage("Sleect the Day"),
         "selectLang": MessageLookupByLibrary.simpleMessage("Select Language"),
         "sendNewPasswordSuccess": MessageLookupByLibrary.simpleMessage(
-            "Password reset email sent successfully."),
+            "Password reset email sent successfully.Please Check your email for Rest Your Password"),
         "sendPassword": MessageLookupByLibrary.simpleMessage("Send"),
         "setting": MessageLookupByLibrary.simpleMessage("Settings"),
         "signUp": MessageLookupByLibrary.simpleMessage(
@@ -141,12 +153,25 @@ class MessageLookup extends MessageLookupByLibrary {
         "thePrice": MessageLookupByLibrary.simpleMessage("The price"),
         "theType": MessageLookupByLibrary.simpleMessage("Type"),
         "thursday": MessageLookupByLibrary.simpleMessage("Thursday"),
+        "too_many_requests": MessageLookupByLibrary.simpleMessage(
+            "Too many login attempts. Please try again later."),
         "totalAccount": MessageLookupByLibrary.simpleMessage(
             "The total account of the day"),
         "transformToPDF":
             MessageLookupByLibrary.simpleMessage("transform to PDF"),
         "tuesday": MessageLookupByLibrary.simpleMessage("Tuesday"),
+        "unknown_error": m0,
+        "user_disabled": MessageLookupByLibrary.simpleMessage(
+            "This user has been disabled."),
+        "user_disabled_admin": MessageLookupByLibrary.simpleMessage(
+            "This user has been disabled by an administrator."),
+        "user_not_found": MessageLookupByLibrary.simpleMessage(
+            "No user found for that email."),
+        "weak_password": MessageLookupByLibrary.simpleMessage(
+            "The password provided is too weak."),
         "wednesday": MessageLookupByLibrary.simpleMessage("Wednesday"),
+        "wrong_password": MessageLookupByLibrary.simpleMessage(
+            "Wrong password provided for that user."),
         "yes": MessageLookupByLibrary.simpleMessage("Yes")
       };
 }

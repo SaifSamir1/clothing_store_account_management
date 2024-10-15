@@ -20,6 +20,8 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'ar';
 
+  static String m0(message) => "حدث خطأ غير معروف: ${message}.";
+
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "Add": MessageLookupByLibrary.simpleMessage("إضافة"),
@@ -89,6 +91,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "edit": MessageLookupByLibrary.simpleMessage("تعديل"),
         "emailValidate": MessageLookupByLibrary.simpleMessage(
             "برجاء ادخال بريد الكتروني صحيح"),
+        "email_already_in_use": MessageLookupByLibrary.simpleMessage(
+            "الحساب موجود بالفعل لهذا البريد الإلكتروني."),
         "forgetPassword":
             MessageLookupByLibrary.simpleMessage("نسيت كلمة السر"),
         "friday": MessageLookupByLibrary.simpleMessage("الجمعة"),
@@ -97,6 +101,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("هل لديك حساب بالفعل؟"),
         "internetError": MessageLookupByLibrary.simpleMessage(
             "حدث خطأ ما، يرجى التحقق من اتصال الإنترنت"),
+        "invalid_credential": MessageLookupByLibrary.simpleMessage(
+            "بيانات الاعتماد المقدمة غير صالحة أو منتهية."),
+        "invalid_email": MessageLookupByLibrary.simpleMessage(
+            "عنوان البريد الإلكتروني غير صالح."),
         "login": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
         "loginEmail":
             MessageLookupByLibrary.simpleMessage("عنوان البريد الإلكتروني"),
@@ -111,12 +119,16 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("تم تسجيل الدخول بنجاح"),
         "monday": MessageLookupByLibrary.simpleMessage("الاثنين"),
         "nameRe": MessageLookupByLibrary.simpleMessage("الاسم مطلوب"),
+        "network_request_failed": MessageLookupByLibrary.simpleMessage(
+            "حدث خطأ في الشبكة. يرجى التحقق من الاتصال الخاص بك."),
         "noCustomersYet":
             MessageLookupByLibrary.simpleMessage("لا يوجد عملاء حتى الآن"),
         "noPaid": MessageLookupByLibrary.simpleMessage("لا يوجد دفع"),
         "noResult":
             MessageLookupByLibrary.simpleMessage("لم يتم العثور على نتائج"),
         "number": MessageLookupByLibrary.simpleMessage("الرقم"),
+        "operation_not_allowed": MessageLookupByLibrary.simpleMessage(
+            "تم تعطيل حسابات البريد الإلكتروني/كلمة المرور."),
         "paidBy": MessageLookupByLibrary.simpleMessage("دفع بيد"),
         "passwordResetDetails": MessageLookupByLibrary.simpleMessage(
             "أدخل عنوان بريدك الإلكتروني أدناه. سنرسل لك بريدًا إلكترونيًا يحتوي على تعليمات لإعادة تعيين كلمة المرور."),
@@ -128,7 +140,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "selTheday": MessageLookupByLibrary.simpleMessage("اختر اليوم"),
         "selectLang": MessageLookupByLibrary.simpleMessage("اختيار اللغه"),
         "sendNewPasswordSuccess": MessageLookupByLibrary.simpleMessage(
-            "تم إرسال بريد إعادة تعيين كلمة المرور بنجاح."),
+            "تم إرسال بريد إعادة تعيين كلمة المرور بنجاح.برجاء فحص الريد الالكتروني لأكمال عملية اعادة تعين كلمة مرور"),
         "sendPassword": MessageLookupByLibrary.simpleMessage("ارسال"),
         "setting": MessageLookupByLibrary.simpleMessage("الاعدادات"),
         "signUp": MessageLookupByLibrary.simpleMessage(
@@ -142,11 +154,24 @@ class MessageLookup extends MessageLookupByLibrary {
         "thePrice": MessageLookupByLibrary.simpleMessage("السعر"),
         "theType": MessageLookupByLibrary.simpleMessage("النوع"),
         "thursday": MessageLookupByLibrary.simpleMessage("الخميس"),
+        "too_many_requests": MessageLookupByLibrary.simpleMessage(
+            "عدد كبير جدًا من محاولات تسجيل الدخول. الرجاء المحاولة لاحقًا."),
         "totalAccount":
             MessageLookupByLibrary.simpleMessage("إجمالي الحساب اليومي"),
         "transformToPDF": MessageLookupByLibrary.simpleMessage("تحويل إلى PDF"),
         "tuesday": MessageLookupByLibrary.simpleMessage("الثلاثاء"),
+        "unknown_error": m0,
+        "user_disabled":
+            MessageLookupByLibrary.simpleMessage("تم تعطيل هذا المستخدم."),
+        "user_disabled_admin": MessageLookupByLibrary.simpleMessage(
+            "تم تعطيل هذا المستخدم بواسطة المسؤول."),
+        "user_not_found": MessageLookupByLibrary.simpleMessage(
+            "لا يوجد مستخدم لهذا البريد الإلكتروني."),
+        "weak_password":
+            MessageLookupByLibrary.simpleMessage("كلمة المرور ضعيفة جدًا."),
         "wednesday": MessageLookupByLibrary.simpleMessage("الأربعاء"),
+        "wrong_password": MessageLookupByLibrary.simpleMessage(
+            "تم توفير كلمة مرور خاطئة لهذا المستخدم."),
         "yes": MessageLookupByLibrary.simpleMessage("نعم")
       };
 }

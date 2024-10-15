@@ -1,7 +1,7 @@
-import 'package:account_mangment_responsive/features/auth_view/data/repositry/auth_repo_impl.dart';
 import 'package:account_mangment_responsive/features/auth_view/presentaion/manger/auth_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import '../../../../../core/dependency_injection/auth.dart';
 import 'auth_section.dart';
 import 'have_account.dart';
 
@@ -25,7 +25,7 @@ class SignUp extends StatelessWidget {
                 ),
                 SliverToBoxAdapter(
                   child: BlocProvider(
-                    create: (context) => AuthCubit(AuthRepoImpl()),
+                    create: (context) => getIt<AuthCubit>(),
                     child: const AuthSectionSignUp(),
                   ),
                 ),
