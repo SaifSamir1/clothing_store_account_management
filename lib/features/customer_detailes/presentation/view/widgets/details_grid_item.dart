@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 
 import '../../../../../core/theme/app_style.dart';
 import '../../../../../core/utils/constant.dart';
@@ -23,7 +24,7 @@ class DetailsItem extends StatelessWidget {
       color: Colors.black12,
       elevation: 0,
       child: Padding(
-        padding: const EdgeInsets.only(left: 15.0,right: 15,),
+        padding: const EdgeInsets.only(left: 15.0,right: 15,top: 15,bottom: 15),
         child: Row(
           children: [
             Text(
@@ -43,7 +44,7 @@ class DetailsItem extends StatelessWidget {
               width: 10,
             ),
             Text(
-              '${productsAndDeductionDetails[index].dateTime!.day} / ${productsAndDeductionDetails[index].dateTime!.month} / ${productsAndDeductionDetails[index].dateTime!.year}',
+              DateFormat('yyyy-MM-dd').format(productsAndDeductionDetails[index].dateTime!),
               style: AppStyles.styleRegular16(context),
             ),
             const SizedBox(

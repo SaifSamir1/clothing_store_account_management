@@ -45,7 +45,6 @@ void _showCustomDialog(BuildContext context,
   showDialog(
     context: context,
     builder: (BuildContext context) {
-      // Use a custom AlertDialog widget
       return CustomAlertDialog(
         isLoading: false,
         title: '',

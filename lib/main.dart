@@ -6,6 +6,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'core/caching/hive/language_cache_helper.dart';
+import 'core/dependency_injection/auth.dart';
 import 'core/utils/block_observer.dart';
 import 'core/utils/constant.dart';
 import 'core/caching/hive/my_box.dart';
@@ -14,6 +15,7 @@ import 'my_app.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   Bloc.observer = MyBlocObserver();
+  setupLocator();
   await firebaseInitialization();
   await SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitUp,
@@ -26,7 +28,7 @@ void main() async {
   userId = FirebaseAuth.instance.currentUser?.uid ?? '';
   runApp(
     DevicePreview(
-      enabled: false,
+      enabled: true,
       builder: (BuildContext context) => const MyApp(),
     ),
   );

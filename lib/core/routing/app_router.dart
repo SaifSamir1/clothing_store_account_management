@@ -64,15 +64,16 @@ abstract class AppRouter {
       GoRoute(
         path: Routes.customerDetailsView,
         pageBuilder: (context, state) {
-          final allData  = state.extra as AllDetailsForTheCustomerModel;
+          final allData = state.extra as AllDetailsForTheCustomerModel;
           return fadeTransitionPage(
             BlocProvider(
               create: (context) => CustomerDetailsCubit(
                 CustomerDetailsRepoImpl(),
-              )..getCustomerDetailsBody(customerId: allData.customerId)..getCustomerInfo(customerId: allData.customerId),
+              )
+                ..getCustomerDetailsBody(customerId: allData.customerId)
+                ..getCustomerInfo(customerId: allData.customerId),
               child: CustomerDetailsView(
-                allDetailsForTheCustomerModel:
-                allData,
+                allDetailsForTheCustomerModel: allData,
               ),
             ),
           );

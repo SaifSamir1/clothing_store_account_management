@@ -31,11 +31,8 @@ class HomeListView extends StatelessWidget {
                 onTap: () {
                   navigateToCustomerDetailsScreen(index, context);
                 },
-                child: AspectRatio(
-                  aspectRatio: 4.5,
-                  child: CustomerItem(
-                    index: index,
-                  ),
+                child: CustomerItem(
+                  index: index,
                 ),
               );
             },

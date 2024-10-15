@@ -10,12 +10,12 @@ import '../models/user_model.dart';
 
 abstract class AuthRepo
 {
-  Future<Either<Exception,UserCredential>> signUp(String emailAddress,String password);
-  Future<Either<Exception,UserCredential>> login(String emailAddress,String password);
+  Future<Either<String, UserCredential>> signUp(String emailAddress,String password,context);
+  Future<Either<String, UserCredential>> login(String emailAddress,String password, context);
 
   Future<Either<Exception,String>> storeTheUserInformation({required UserInfoModel infoOfTheUser});
   Future<Either<Exception,String>> storeTheCountryName();
 
-  Future<Either<Exception,String>> resetPasswordAndSendItToMyEmail(String email,context);
+  Future<Either<String,String>> resetPasswordAndSendItToMyEmail(String email,context);
 
 }

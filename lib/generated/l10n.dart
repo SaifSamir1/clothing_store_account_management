@@ -780,10 +780,10 @@ class S {
     );
   }
 
-  /// `Password reset email sent successfully.`
+  /// `Password reset email sent successfully.Please Check your email for Rest Your Password`
   String get sendNewPasswordSuccess {
     return Intl.message(
-      'Password reset email sent successfully.',
+      'Password reset email sent successfully.Please Check your email for Rest Your Password',
       name: 'sendNewPasswordSuccess',
       desc: '',
       args: [],
@@ -875,6 +875,166 @@ class S {
     return Intl.message(
       'Date',
       name: 'date',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Type`
+  String get theType {
+    return Intl.message(
+      'Type',
+      name: 'theType',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The price`
+  String get thePrice {
+    return Intl.message(
+      'The price',
+      name: 'thePrice',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Amount`
+  String get amount {
+    return Intl.message(
+      'Amount',
+      name: 'amount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Back`
+  String get back {
+    return Intl.message(
+      'Back',
+      name: 'back',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `No user found for that email.`
+  String get user_not_found {
+    return Intl.message(
+      'No user found for that email.',
+      name: 'user_not_found',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Wrong password provided for that user.`
+  String get wrong_password {
+    return Intl.message(
+      'Wrong password provided for that user.',
+      name: 'wrong_password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The email address is not valid.`
+  String get invalid_email {
+    return Intl.message(
+      'The email address is not valid.',
+      name: 'invalid_email',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `This user has been disabled.`
+  String get user_disabled {
+    return Intl.message(
+      'This user has been disabled.',
+      name: 'user_disabled',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Too many login attempts. Please try again later.`
+  String get too_many_requests {
+    return Intl.message(
+      'Too many login attempts. Please try again later.',
+      name: 'too_many_requests',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Email/password accounts are not enabled.`
+  String get operation_not_allowed {
+    return Intl.message(
+      'Email/password accounts are not enabled.',
+      name: 'operation_not_allowed',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The provided credential is invalid or expired.`
+  String get invalid_credential {
+    return Intl.message(
+      'The provided credential is invalid or expired.',
+      name: 'invalid_credential',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `An unknown error occurred: {message}.`
+  String unknown_error(Object message) {
+    return Intl.message(
+      'An unknown error occurred: $message.',
+      name: 'unknown_error',
+      desc: '',
+      args: [message],
+    );
+  }
+
+  /// `The password provided is too weak.`
+  String get weak_password {
+    return Intl.message(
+      'The password provided is too weak.',
+      name: 'weak_password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The account already exists for that email.`
+  String get email_already_in_use {
+    return Intl.message(
+      'The account already exists for that email.',
+      name: 'email_already_in_use',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `A network error occurred. Please check your connection.`
+  String get network_request_failed {
+    return Intl.message(
+      'A network error occurred. Please check your connection.',
+      name: 'network_request_failed',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `This user has been disabled by an administrator.`
+  String get user_disabled_admin {
+    return Intl.message(
+      'This user has been disabled by an administrator.',
+      name: 'user_disabled_admin',
       desc: '',
       args: [],
     );

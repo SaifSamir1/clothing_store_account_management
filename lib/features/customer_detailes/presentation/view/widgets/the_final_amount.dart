@@ -19,7 +19,7 @@ class TheFinalAmount extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Text('   -${S.of(context).FinalAccount}:  ',
+        Text('   - ${S.of(context).FinalAccount}:  ',
             style: AppStyles.styleSemiBold24WithoutFontFamily(context)),
         Container(
           padding: const EdgeInsets.all(10),
@@ -37,7 +37,7 @@ class TheFinalAmount extends StatelessWidget {
               if (state is GetCustomerInfoLoading ||
                   context.read<CustomerDetailsCubit>().customerInfo == null) {
                 return const Center(
-                  child: Text("        "),
+                  child: Text("            "),
                 );
               }
               return Text(

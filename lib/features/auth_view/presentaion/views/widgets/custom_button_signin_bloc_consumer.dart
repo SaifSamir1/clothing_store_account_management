@@ -43,7 +43,9 @@ class CustomButtonSignInBlocConsumer extends StatelessWidget {
             if (formKey.currentState!.validate()) {
               BlocProvider.of<AuthCubit>(context).login(
                   email: emailController.text,
-                  password: passwordController.text);
+                  password: passwordController.text,
+                context: context
+              );
             }
           },
           minWidth: double.infinity,

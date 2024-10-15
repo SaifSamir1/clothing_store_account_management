@@ -58,6 +58,7 @@ class SignUpButtonBlockConsumer extends StatelessWidget {
                   .signUpAndSaveTheUserInformation(
                 userInfoModel: userInfoModel,
                 password: passwordController.text,
+                context: context
               );
             }
           },

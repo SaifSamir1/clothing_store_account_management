@@ -1,7 +1,7 @@
 import 'package:account_mangment_responsive/features/auth_view/presentaion/views/widgets/signup_logo.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import '../../../data/repositry/auth_repo_impl.dart';
+import '../../../../../core/dependency_injection/auth.dart';
 import '../../manger/auth_cubit.dart';
 import 'auth_section.dart';
 
@@ -19,7 +19,7 @@ class AuthScreenBodySignUp extends StatelessWidget {
           const SignUpLogo(),
           SliverToBoxAdapter(
             child: BlocProvider(
-              create: (context) => AuthCubit(AuthRepoImpl()),
+              create: (context) => getIt<AuthCubit>(),
               child: const AuthSectionSignUp(),
             ),
           ),

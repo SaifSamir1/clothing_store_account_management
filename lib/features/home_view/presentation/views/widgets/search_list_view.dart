@@ -24,11 +24,8 @@ class SearchListView extends StatelessWidget {
           onTap: () {
             navigateToCustomerDetailsScreen(index, context);
           },
-          child: AspectRatio(
-            aspectRatio: 4.5,
-            child: SearchedListViewCustomerItem(
-              index: index,
-            ),
+          child: SearchedListViewCustomerItem(
+            index: index,
           ),
         );
       },

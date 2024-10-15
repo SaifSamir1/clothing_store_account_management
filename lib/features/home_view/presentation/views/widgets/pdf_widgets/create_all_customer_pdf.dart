@@ -39,14 +39,14 @@ class _CreateAllCustomerPdfState extends State<CreateAllCustomerPdf> {
     );
   }
 
-  Future<void> _generatePdf(BuildContext context) async {
+  Future<void> _generatePdf(context) async {
     await BlocProvider.of<PdfCubit>(context).getCustomerLastPaidDate(
       allCustomers: BlocProvider.of<HomeCubit>(context).allCustomersDetails.docs,
       context: context,
     );
 
     if (!await requestStoragePermission(context)) {
-      return; // Permission not granted
+      return;
     }
     final pdfFile = await PdfService.generate(
       context: context,
