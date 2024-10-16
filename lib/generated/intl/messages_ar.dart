@@ -105,6 +105,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "بيانات الاعتماد المقدمة غير صالحة أو منتهية."),
         "invalid_email": MessageLookupByLibrary.simpleMessage(
             "عنوان البريد الإلكتروني غير صالح."),
+        "loadingPleaseWait":
+            MessageLookupByLibrary.simpleMessage("برجاء الانتظار"),
         "login": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
         "loginEmail":
             MessageLookupByLibrary.simpleMessage("عنوان البريد الإلكتروني"),

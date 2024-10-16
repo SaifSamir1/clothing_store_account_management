@@ -107,6 +107,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "The provided credential is invalid or expired."),
         "invalid_email": MessageLookupByLibrary.simpleMessage(
             "The email address is not valid."),
+        "loadingPleaseWait":
+            MessageLookupByLibrary.simpleMessage("Please wait"),
         "login": MessageLookupByLibrary.simpleMessage("Sign in"),
         "loginEmail": MessageLookupByLibrary.simpleMessage("Email address"),
         "loginEmailVal":

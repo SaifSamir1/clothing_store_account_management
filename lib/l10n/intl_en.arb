@@ -98,5 +98,6 @@
     "weak_password": "The password provided is too weak.",
     "email_already_in_use": "The account already exists for that email.",
     "network_request_failed": "A network error occurred. Please check your connection.",
-    "user_disabled_admin": "This user has been disabled by an administrator."
+    "user_disabled_admin": "This user has been disabled by an administrator.",
+    "loadingPleaseWait" : "Please wait"
 }   

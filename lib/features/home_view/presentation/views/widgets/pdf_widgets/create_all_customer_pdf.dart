@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../../../../core/utils/pdf_service.dart';
 import '../../../../../../core/utils/storage_permission.dart';
+import '../../../../../../core/widgets/loading_dialog.dart';
 import 'build_pdf_all_customer_header.dart';
 import 'build_pdf_all_customers_footer.dart';
 import 'build_pdf_customers_details_table.dart';
@@ -22,26 +23,32 @@ class _CreateAllCustomerPdfState extends State<CreateAllCustomerPdf> {
   @override
   Widget build(BuildContext context) {
     return BlocListener<PdfCubit, PdfState>(
-      listener: (context, state) {
-        if (state is GetLastDateForCustomerPaidSuccess) {
-          setState(() {
-            customersLastPaidDate = state.getLastDateForCustomerPaid;
-          });
-        }
-      },
-      child: ListTile(
-        title: Text(S.of(context).transformToPDF),
-        leading: const Icon(Icons.picture_as_pdf),
-        onTap: () async {
-          await _generatePdf(context);
+        listener: (context, state) {
+          if (state is GetLastDateForCustomerPaidSuccess) {
+            Navigator.of(context).pop();
+            setState(() {
+              customersLastPaidDate = state.getLastDateForCustomerPaid;
+            });
+          }
         },
-      ),
-    );
+        child: Stack(
+          children: [
+            ListTile(
+              title: Text(S.of(context).transformToPDF),
+              leading: const Icon(Icons.picture_as_pdf),
+              onTap: () async {
+                showLoadingDialog(context);
+                await _generatePdf(context);
+              },
+            ),
+          ],
+        ));
   }
 
   Future<void> _generatePdf(context) async {
     await BlocProvider.of<PdfCubit>(context).getCustomerLastPaidDate(
-      allCustomers: BlocProvider.of<HomeCubit>(context).allCustomersDetails.docs,
+      allCustomers:
+          BlocProvider.of<HomeCubit>(context).allCustomersDetails.docs,
       context: context,
     );
 
